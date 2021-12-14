@@ -1,5 +1,9 @@
 import { v4 as uuidv4 } from 'uuid'
 
-const id = uuidv4()
+export const id = uuidv4()
+
+export const addTwoNumbers = (number_1: number, number_2: number): number => {
+    return number_1 + number_2
+}
 
 console.log(id)
