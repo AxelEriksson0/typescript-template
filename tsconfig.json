@@ -5,6 +5,8 @@
             "dom.iterable",
             "ES2021"
         ],
+        "noImplicitAny": true,
+        "noImplicitThis": true,
         "outDir": "build",
         "rootDir": "src/",
         "target": "ES2021"

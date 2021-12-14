@@ -14,9 +14,20 @@
     },
     "plugins": [
         "@typescript-eslint",
+        "ban",
         "unused-imports"
     ],
     "rules": {
+        "ban/ban": [
+            "error",
+            {
+                "name": [
+                    "it",
+                    "only"
+                ],
+                "message": "Don't focus tests"
+            }
+        ],
         "semi": [
             "error",
             "never"
