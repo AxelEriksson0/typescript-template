@@ -1,7 +1,10 @@
 {
+  "engines": {
+    "node": ">=17.1.0"
+  },
   "name": "typescript-template",
   "version": "1.0.0",
-  "description": "My opinionated TypeScript template",
+  "description": "My opinionated TypeScript + ESLint template",
   "main": "build/index.js",
   "scripts": {
     "build": "tsc",
@@ -14,9 +17,12 @@
     "type": "git",
     "url": "git+https://github.com/AxelEriksson0/typescript-template.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "eslint",
+    "typescript"
+  ],
+  "author": "Axel Eriksson",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/AxelEriksson0/typescript-template/issues"
   },

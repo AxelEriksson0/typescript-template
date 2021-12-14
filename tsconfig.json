@@ -3,9 +3,10 @@
         "lib": [
             "dom",
             "dom.iterable",
-            "esnext"
+            "ES2021"
         ],
         "outDir": "build",
-        "rootDir": "src/"
+        "rootDir": "src/",
+        "target": "ES2021"
     }
 }
