@@ -17,7 +17,6 @@
         "unused-imports"
     ],
     "rules": {
-        "object-curly-spacing": "error",
         "semi": [
             "error",
             "never"

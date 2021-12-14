@@ -1,2 +1,4 @@
-# typescript-template
-My opinionated TypeScript template
+# TypeScript and ESLint template
+My opinionated TypeScript and ESLint template.
+
+Having `uuid` as dependency to check eslint import.
