@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "forceConsistentCasingInFileNames": true,
         "lib": [
             "dom",
             "dom.iterable",
@@ -7,9 +8,11 @@
         ],
         "noFallthroughCasesInSwitch": true,
         "noImplicitAny": true,
+        "noImplicitReturns": true,
         "noImplicitThis": true,
         "outDir": "build",
         "rootDir": "src/",
+        "strictNullChecks": true,
         "target": "ES2021"
     }
 }

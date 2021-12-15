@@ -28,6 +28,7 @@
                 "message": "Don't focus tests"
             }
         ],
+        "eol-last": "error",
         "prefer-template": "error",
         "quotes": "error",
         "semi": [
