@@ -28,6 +28,8 @@
                 "message": "Don't focus tests"
             }
         ],
+        "prefer-template": "error",
+        "quotes": "error",
         "semi": [
             "error",
             "never"
