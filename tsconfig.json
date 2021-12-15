@@ -5,6 +5,7 @@
             "dom.iterable",
             "ES2021"
         ],
+        "noFallthroughCasesInSwitch": true,
         "noImplicitAny": true,
         "noImplicitThis": true,
         "outDir": "build",
