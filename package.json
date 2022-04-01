@@ -12,7 +12,7 @@
     "dev": "node --loader ts-node/esm src/index.ts",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "start": "node build/index.js",
-    "ut": "jest ./src/**/**/*.spec.ts",
+    "ut": "jest ./src",
     "watch": "tsc -w"
   },
   "repository": {
