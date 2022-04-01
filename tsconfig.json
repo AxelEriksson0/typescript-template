@@ -1,18 +1,27 @@
 {
-    "compilerOptions": {
-        "forceConsistentCasingInFileNames": true,
-        "lib": [
-            "dom",
-            "dom.iterable",
-            "ES2021"
-        ],
-        "noFallthroughCasesInSwitch": true,
-        "noImplicitAny": true,
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
-        "outDir": "build",
-        "rootDir": "src/",
-        "strictNullChecks": true,
-        "target": "ES2021"
-    }
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["dom", "dom.iterable", "ES2021"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "outDir": "build",
+    "rootDir": "src/",
+    "strictBindCallApply": true,
+
+    /*
+     * export enum Suit { Diamonds = "Diamonds", Clovers = "Cloves", Hearts = "Hearts", Spades = "Spades" }
+     * Object.keys(Suit).forEach((suit: Suit)) would not work when strictFunctionTypes: true
+     */
+    "strictFunctionTypes": false,
+
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "target": "ES2021",
+    "useUnknownInCatchVariables": true
+  }
 }
