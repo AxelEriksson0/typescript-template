@@ -1,4 +1,4 @@
-import { addTwoNumbers } from "../index"
+import { addTwoNumbers } from "../utils/addTwoNumbers.js"
 
 describe("addTwoNumbers", () => {
 
