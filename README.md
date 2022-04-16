@@ -2,4 +2,5 @@
 
 My opinionated TypeScript and ESLint template.
 
-Having `uuid` as dependency to check eslint import.
+- ESM (requires TypeScript 4.7.0+)
+- Having `uuid` as dependency to check eslint import.

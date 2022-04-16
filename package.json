@@ -4,7 +4,7 @@
   },
   "type": "module",
   "name": "typescript-template",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "My opinionated TypeScript + ESLint template",
   "main": "build/index.js",
   "scripts": {
@@ -13,6 +13,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "start": "node build/index.js",
     "ut": "jest ./src",
+    "test": "npm run lint && npm run ut",
     "watch": "tsc -w"
   },
   "repository": {
