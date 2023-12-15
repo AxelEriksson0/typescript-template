@@ -16,15 +16,12 @@ export default [
       "**/*.tsx"
     ],
     ignores: [
-      "build/**/*",
+      "dist/**/*",
       "**/node_modules/"
     ],
     languageOptions: {
       ecmaVersion: "latest",
-      globals: {
-        ...globals.browser,
-        ...globals.jest
-      },
+      globals: { ...globals.browser, },
       parser: typescriptParser,
       parserOptions: {
         ecmaFeatures: { jsx: true },
