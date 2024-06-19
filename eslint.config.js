@@ -80,7 +80,7 @@ export default [
       "stylistic/quotes": "error",
       "stylistic/semi": ["error", "never"],
       "stylistic/spaced-comment": "error",
-      "unused-imports/no-unused-imports-ts": "error",
+      "unused-imports/no-unused-imports": "error",
     },
   }
 ]

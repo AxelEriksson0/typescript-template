@@ -12,5 +12,3 @@ test("multiplyTwoNumbers(5, 10) should return 50", () => {
   const result = multiplyTwoNumbers(5, 10)
   expect(result).toBe(50)
 })
-
-// })
