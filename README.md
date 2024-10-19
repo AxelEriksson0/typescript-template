@@ -1,6 +1,6 @@
-# TypeScript and ESLint template
+# TypeScript template
 
-My opinionated TypeScript and ESLint template.
+My opinionated TypeScript template that sets up a project with EsLint, testing, package manager, CI/CD, and more.
 
 - Using ESLint's new configuration system - https://eslint.org/docs/latest/use/configure/configuration-files-new
 - Using Yarn as it simplifies adding arguments when running scripts.
