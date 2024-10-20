@@ -21,7 +21,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "node --loader ts-node/esm src/index.ts",
-    "lint": "eslint .",
+    "lint": "eslint --flag unstable_ts_config .",
     "start": "node dist/src/index.js",
     "test": "yarn lint && yarn ut",
     "update-dependencies": "npx npm-check-updates -u && yarn && yarn dedupe",
@@ -37,6 +37,7 @@
     "eslint-plugin-ban": "^1.6.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unused-imports": "^4.1.4",
+    "jiti": "^2.3.3",
     "ts-node": "^10.9.2",
     "tsx": "^4.19.1",
     "typescript": "^5.6.3"

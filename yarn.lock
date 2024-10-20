@@ -1470,6 +1470,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jiti@npm:^2.3.3":
+  version: 2.3.3
+  resolution: "jiti@npm:2.3.3"
+  bin:
+    jiti: lib/jiti-cli.mjs
+  checksum: 10c0/d71e40fb3c359cddafa2a6a03aea7e5e3a571aedeb5bec7627d5bc67c1e66c6275be5c03b4e0b10cd22cde9d39c892f27f6598a4e63bde030b607efc5051fd7f
+  languageName: node
+  linkType: hard
+
 "js-yaml@npm:^4.1.0":
   version: 4.1.0
   resolution: "js-yaml@npm:4.1.0"
@@ -2215,6 +2224,7 @@ __metadata:
     eslint-plugin-ban: "npm:^1.6.0"
     eslint-plugin-simple-import-sort: "npm:^12.1.1"
     eslint-plugin-unused-imports: "npm:^4.1.4"
+    jiti: "npm:^2.3.3"
     solid-js: "npm:^1.9.2"
     ts-node: "npm:^10.9.2"
     tsx: "npm:^4.19.1"
