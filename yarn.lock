@@ -968,15 +968,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-ban@npm:^1.6.0":
-  version: 1.6.0
-  resolution: "eslint-plugin-ban@npm:1.6.0"
-  dependencies:
-    requireindex: "npm:~1.2.0"
-  checksum: 10c0/eaf22519eee2b7c7b4b7c5df92e74e080e169064ed0c7e52de0ca3c34157612268fb7f34b742810e8c7fed24058ccca75daf2ae3343b19c905d1894bdd98411e
-  languageName: node
-  linkType: hard
-
 "eslint-plugin-simple-import-sort@npm:^12.1.1":
   version: 12.1.1
   resolution: "eslint-plugin-simple-import-sort@npm:12.1.1"
@@ -1900,13 +1891,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"requireindex@npm:~1.2.0":
-  version: 1.2.0
-  resolution: "requireindex@npm:1.2.0"
-  checksum: 10c0/7fb42aed73bf8de9acc4d6716cf07acc7fbe180e58729433bafcf702e76e7bb10e54f8266c06bfec62d752e0ac14d50e8758833de539e6f4e2cd642077866153
-  languageName: node
-  linkType: hard
-
 "resolve-from@npm:^4.0.0":
   version: 4.0.0
   resolution: "resolve-from@npm:4.0.0"
@@ -2221,7 +2205,6 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^8.10.0"
     "@typescript-eslint/parser": "npm:^8.10.0"
     eslint: "npm:^9.13.0"
-    eslint-plugin-ban: "npm:^1.6.0"
     eslint-plugin-simple-import-sort: "npm:^12.1.1"
     eslint-plugin-unused-imports: "npm:^4.1.4"
     jiti: "npm:^2.3.3"

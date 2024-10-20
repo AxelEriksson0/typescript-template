@@ -3,8 +3,6 @@ import js from "@eslint/js"
 import stylistic from "@stylistic/eslint-plugin"
 import typescriptPlugin from "@typescript-eslint/eslint-plugin"
 import typescriptParser from "@typescript-eslint/parser"
-// @ts-expect-error no types
-import ban from "eslint-plugin-ban"
 import simpleSortImport from "eslint-plugin-simple-import-sort"
 import unusedImports from "eslint-plugin-unused-imports"
 import globals from "globals"
@@ -34,7 +32,6 @@ export default [
     },
     plugins: {
       "@typescript-eslint": typescriptPlugin,
-      "ban": ban,
       "simple-import-sort": simpleSortImport,
       "stylistic": stylistic,
       "unused-imports": unusedImports
@@ -43,16 +40,20 @@ export default [
       ...typescriptPlugin.configs["eslint-recommended"].rules,
       ...typescriptPlugin.configs["recommended"].rules,
       "@typescript-eslint/no-floating-promises": ["error"],
-      "ban/ban": [
+      "no-restricted-syntax": [
         "error",
         {
-          "message": "Don't focus tests",
-          "name": ["it", "only"]
+          message: "Don't focus tests",
+          selector: "MemberExpression[object.name='describe'][property.name='only']",
         },
         {
-          "message": "Don't focus tests",
-          "name": ["test", "only"]
-        }
+          message: "Don't focus tests",
+          selector: "MemberExpression[object.name='it'][property.name='only']",
+        },
+        {
+          message: "Don't focus tests",
+          selector: "MemberExpression[object.name='test'][property.name='only']",
+        },
       ],
       "no-var": "error",
       "prefer-const": "error",
