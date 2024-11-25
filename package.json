@@ -29,23 +29,23 @@
     "watch": "tsc -w"
   },
   "devDependencies": {
-    "@stylistic/eslint-plugin": "^2.9.0",
-    "@types/node": "^22.7.7",
-    "@typescript-eslint/eslint-plugin": "^8.10.0",
-    "@typescript-eslint/parser": "^8.10.0",
-    "eslint": "^9.13.0",
+    "@stylistic/eslint-plugin": "^2.11.0",
+    "@types/node": "^22.9.4",
+    "@typescript-eslint/eslint-plugin": "^8.16.0",
+    "@typescript-eslint/parser": "^8.16.0",
+    "eslint": "^9.15.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unused-imports": "^4.1.4",
-    "jiti": "^2.3.3",
+    "jiti": "^2.4.0",
     "ts-node": "^10.9.2",
-    "tsx": "^4.19.1",
-    "typescript": "^5.6.3"
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
   },
   "packageManager": "yarn@4.5.0",
   "engines": {
     "node": ">=23.0.0"
   },
   "dependencies": {
-    "solid-js": "^1.9.2"
+    "solid-js": "^1.9.3"
   }
 }

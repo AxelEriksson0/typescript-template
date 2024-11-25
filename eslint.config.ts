@@ -1,4 +1,3 @@
-// @ts-expect-error no types
 import js from "@eslint/js"
 import stylistic from "@stylistic/eslint-plugin"
 import typescriptPlugin from "@typescript-eslint/eslint-plugin"
