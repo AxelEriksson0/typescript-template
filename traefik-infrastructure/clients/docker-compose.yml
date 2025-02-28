@@ -1,0 +1,14 @@
+services:
+  hello-world:
+    container_name: hello-world
+    image: crccheck/hello-world
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.hello-world.entrypoints=web
+    networks:
+      - shared-network
+    restart: unless-stopped
+
+networks:
+  shared-network:
+    external: true
