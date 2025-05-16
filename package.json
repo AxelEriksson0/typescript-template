@@ -25,16 +25,12 @@
     "start": "node dist/src/index.js",
     "test": "yarn lint && yarn ut",
     "update-dependencies": "npx npm-check-updates -u && yarn && yarn dedupe",
-    "ut": "node --experimental-test-coverage --import tsx --test src/**/*.test.ts",
+    "ut": "yarn workspaces foreach --all run ut",
     "watch": "tsc -w"
   },
   "workspaces": [
-    "packages/client",
-    "packages/database",
-    "packages/e2e-tests",
-    "packages/server",
-    "packages/server-python",
-    "packages/types"
+    "packages/simple-function-and-test",
+    "packages/web"
   ],
   "devDependencies": {
     "@stylistic/eslint-plugin": "^4.2.0",

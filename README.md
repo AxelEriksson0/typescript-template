@@ -1,6 +1,6 @@
 # TypeScript template
 
-This repository started out as a simple opinionated tsconfig.json template. Apparently there was a lot of things to be opinionated about so now this is fully fleged with setups for EsLint, testing, package manager, CI/CD, web and more.
+This repository started out as a simple opinionated tsconfig.json template. Apparently there was a lot of things to be opinionated about so now this template is a monster with setups for EsLint, testing, package manager, CI/CD, web and more. I'm not sure if it's a good thing.
 
 ## Packages
 

@@ -1,0 +1,7 @@
+{
+  "name": "simple-function-and-test",
+  "type": "module",
+  "scripts": {
+    "ut": "node --experimental-test-coverage --import tsx --test **/*.test.ts"
+  }
+}
