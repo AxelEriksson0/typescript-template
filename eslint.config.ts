@@ -15,7 +15,7 @@ export default [
       "**/*.tsx"
     ],
     ignores: [
-      "dist/**/*",
+      "**/dist/**/*",
       "**/node_modules/"
     ],
     languageOptions: {

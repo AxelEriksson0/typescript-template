@@ -1,14 +1,19 @@
 {
   "name": "web",
+  "description": "This is a simple web starter template. Use as a base.",
   "type": "module",
   "scripts": {
+    "build": "yarn prepare && vite build",
+    "prepare": "panda codegen",
     "watch": "vite"
   },
   "dependencies": {
+    "@ark-ui/solid": "^5.9.1",
     "@solidjs/router": "^0.15.3",
-    "solid-js": "^1.9.6"
+    "solid-js": "^1.9.7"
   },
   "devDependencies": {
+    "@pandacss/dev": "^0.48.0",
     "vite": "^6.3.5",
     "vite-plugin-solid": "^2.11.6",
     "vite-tsconfig-paths": "^5.1.4"

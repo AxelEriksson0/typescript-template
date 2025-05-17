@@ -29,3 +29,7 @@ Web infrastructure project with SolidJS, Ark UI for components and Panda CSS for
 ### npm-check-updates
 
 `npm-check-updates` helps automatically updating the dependencies in the project. Will most likely not be used in a real project because they can be very sensitive to updating dependencies, even minor ones.
+
+### jiti
+
+Jiti is required for `eslint` to function.
