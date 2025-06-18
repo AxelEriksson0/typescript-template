@@ -1,0 +1,22 @@
+{
+  "name": "web",
+  "description": "This is a simple web starter template. Use as a base.",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "start": "vite",
+    "watch": "vite"
+  },
+  "dependencies": {
+    "@solidjs/router": "^0.15.3",
+    "@tailwindcss/vite": "^4.1.10",
+    "daisyui": "^5.0.43",
+    "solid-js": "^1.9.7",
+    "tailwindcss": "^4.1.10"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5",
+    "vite-plugin-solid": "^2.11.6",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}

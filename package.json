@@ -1,0 +1,52 @@
+{
+  "name": "typescript-template",
+  "version": "2.0.0",
+  "description": "My opinionated TypeScript + ESLint template",
+  "keywords": [
+    "eslint",
+    "template",
+    "typescript",
+    "yarn"
+  ],
+  "homepage": "https://github.com/AxelEriksson0/typescript-template#readme",
+  "bugs": {
+    "url": "https://github.com/AxelEriksson0/typescript-template/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AxelEriksson0/typescript-template.git"
+  },
+  "license": "MIT",
+  "author": "Axel Eriksson",
+  "type": "module",
+  "workspaces": [
+    "packages/simple-function-and-test",
+    "packages/web"
+  ],
+  "scripts": {
+    "build": "yarn workspaces foreach --all -pt run build",
+    "dev": "yarn workspaces foreach --all -pt run dev",
+    "lint": "eslint .",
+    "start": "yarn workspaces foreach --all -pt run start",
+    "test": "yarn lint && yarn ut",
+    "update-dependencies": "npx npm-check-updates --deep --upgrade && yarn && yarn dedupe",
+    "ut": "yarn workspaces foreach --all run ut"
+  },
+  "dependencies": {
+    "solid-js": "^1.9.7"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/eslint-plugin": "^8.34.1",
+    "@typescript-eslint/parser": "^8.34.1",
+    "eslint": "^9.29.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "jiti": "^2.4.2",
+    "typescript": "^5.8.3"
+  },
+  "packageManager": "yarn@4.9.1",
+  "engines": {
+    "node": ">=24.0.0"
+  }
+}
