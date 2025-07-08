@@ -4,11 +4,16 @@ services:
     image: crccheck/hello-world
     labels:
       - traefik.enable=true
-      - traefik.http.routers.hello-world.entrypoints=web
-      - traefik.http.routers.hello-world.rule=Host(`localhost`)
-      - traefik.http.services.hello-world.loadbalancer.server.port=8000
-    ports:
-      - "8000:8000"
+
+      - traefik.http.routers.hello-world-http.entrypoints=web
+      - traefik.http.routers.hello-world-http.rule=Host(`localhost`)
+      # crccheck/hello-world is served on port 8000 by default
+      - traefik.http.services.hello-world-http.loadbalancer.server.port=8000
+
+      - traefik.http.routers.hello-world-https.entrypoints=websecure
+      - traefik.http.routers.hello-world-https.rule=Host(`localhost`)
+      - traefik.http.routers.hello-world-https.tls=true
+      - traefik.http.routers.hello-world-https.tls.certresolver=letsencrypt
     networks:
       - traefik-network
     restart: unless-stopped
