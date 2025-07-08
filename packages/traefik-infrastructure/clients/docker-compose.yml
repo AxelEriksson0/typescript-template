@@ -5,10 +5,14 @@ services:
     labels:
       - traefik.enable=true
       - traefik.http.routers.hello-world.entrypoints=web
+      - traefik.http.routers.hello-world.rule=Host(`localhost`)
+      - traefik.http.services.hello-world.loadbalancer.server.port=8000
+    ports:
+      - "8000:8000"
     networks:
-      - shared-network
+      - traefik-network
     restart: unless-stopped
 
 networks:
-  shared-network:
+  traefik-network:
     external: true
