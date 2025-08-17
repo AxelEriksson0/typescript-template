@@ -1,6 +1,12 @@
 {
   "compilerOptions": {
-    "allowUnreachableCode": false,
+    /*
+     * TODO - Move into packages/web.
+     * See docs/TSCONFIG.md for more information.
+     */
+    "allowJs": true,
+    "allowUnreachableCode": true,
+    "composite": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",

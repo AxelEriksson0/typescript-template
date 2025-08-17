@@ -1,3 +1,4 @@
+import { paraglideVitePlugin } from "@inlang/paraglide-js"
 import tailwindcss from "@tailwindcss/vite"
 import { defineConfig } from "vite"
 import solidPlugin from "vite-plugin-solid"
@@ -12,6 +13,21 @@ export default defineConfig({
     For more info see https://github.com/thetarnav/solid-devtools/tree/main/packages/extension#readme
     */
     // devtools(),
+    paraglideVitePlugin({
+      outdir: "./src/paraglide",
+      project: "./project.inlang",
+      strategy: ["url"],
+      urlPatterns: [
+        {
+          localized: [
+            ["en", "/en/:path(.*)?"],
+            // ✅ make sure to match the least specific path last
+            ["sv", "/:path(.*)?"],
+          ],
+          pattern: "/:path(.*)?",
+        },
+      ],
+    }),
     solidPlugin(),
     tailwindcss(),
     tsconfigPaths({ root: "./" })

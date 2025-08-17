@@ -4,7 +4,7 @@ import "./index.css"
 import { Route, Router } from "@solidjs/router"
 import { render } from "solid-js/web"
 
-import { App } from "./App.jsx"
+import { App } from "./App"
 
 const root = document.getElementById("root")
 
@@ -17,5 +17,7 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 render(() => <Router>
   <Route
     component={App}
-    path="/" />
+    path={
+      ["/", "/en"]
+    } />
 </Router>, root!)

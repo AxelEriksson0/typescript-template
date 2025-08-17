@@ -2,6 +2,7 @@
   "extends": "../../tsconfig.json",
   "include": ["**/*.ts", "*.ts"],
   "compilerOptions": {
+    "allowJs": true,
     "moduleResolution": "bundler",
     "module": "esnext",
     "outDir": "./dist"
