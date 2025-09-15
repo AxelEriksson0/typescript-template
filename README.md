@@ -20,9 +20,13 @@ Web infrastructure project with SolidJS and DaisyUI.
 
 ## Structure
 
-- Using ESLint's new configuration system - https://eslint.org/docs/latest/use/configure/configuration-files-new
 - Using Yarn as it simplifies adding arguments when running scripts.
 - ESM (requires TypeScript 4.7.0+)
+
+### ESLint
+
+- Using ESLint's new configuration system - https://eslint.org/docs/latest/use/configure/configuration-files-new
+- See settings.json for entire ESLint VS Code extension configuration.
 
 ### fnm
 
@@ -31,7 +35,3 @@ Web infrastructure project with SolidJS and DaisyUI.
 ### npm-check-updates
 
 `npm-check-updates` helps automatically updating the dependencies in the project. Will most likely not be used in a real project because they can be very sensitive to updating dependencies, even minor ones.
-
-### jiti
-
-Jiti is required for `eslint` to function.
