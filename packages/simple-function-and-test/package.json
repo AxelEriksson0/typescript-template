@@ -10,9 +10,9 @@
     "watch": "tsc -w"
   },
   "devDependencies": {
-    "@types/node": "^24.5.0",
+    "@types/node": "^24.9.2",
     "ts-node": "^10.9.2",
-    "tsx": "^4.20.5",
-    "typescript": "^5.9.2"
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
   }
 }

@@ -4,6 +4,11 @@ This repository started out as a simple opinionated tsconfig.json template. Ther
 
 Maybe this repository is too big now...
 
+## Setup
+
+- `npm install -g corepack`
+- `corepack enable`
+
 ## Packages
 
 ### Simple function and test
