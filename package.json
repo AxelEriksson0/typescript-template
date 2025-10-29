@@ -29,10 +29,10 @@
     "lint": "eslint --flag unstable_native_nodejs_ts_config .",
     "start": "yarn workspaces foreach --all -pt run start",
     "test": "yarn lint && yarn ut",
-    "update:dependencies": "npx npm-check-updates --deep --upgrade --install always && yarn && yarn dedupe",
-    "update:yarn": "yarn set version latest && corepack prepare yarn@latest --activate",
-    "update:node": "fnm install \"$(fnm list-remote | tail -n 1)\" && fnm use \"$(fnm list-remote | tail -n 1)\" && node -v > .node-version",
     "update": "yarn update:node && yarn update:yarn && yarn update:dependencies",
+    "update:dependencies": "npx npm-check-updates --deep --upgrade --install always && yarn && yarn dedupe",
+    "update:node": "fnm install \"$(fnm list-remote | tail -n 1)\" && fnm use \"$(fnm list-remote | tail -n 1)\" && fnm list-remote | tail -n 1 > .node-version",
+    "update:yarn": "yarn set version latest && corepack prepare yarn@latest --activate",
     "ut": "yarn workspaces foreach --all run ut"
   },
   "dependencies": {
