@@ -15,22 +15,16 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "dist",
     "strict": true,
-    "strictBindCallApply": true,
     /*
      * export enum Suit { Diamonds = "Diamonds", Clovers = "Cloves", Hearts = "Hearts", Spades = "Spades" }
      * Object.keys(Suit).forEach((suit: Suit)) would not work when strictFunctionTypes: true
      */
     "strictFunctionTypes": false,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true,
-    "target": "ESNext",
-    "useUnknownInCatchVariables": true
+    "target": "ESNext"
   }
 }
