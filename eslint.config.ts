@@ -63,7 +63,13 @@ export default defineConfig([
       "@stylistic/quotes": "error",
       "@stylistic/semi": ["error", "never"],
       "@stylistic/spaced-comment": "error",
-      "@typescript-eslint/no-floating-promises": ["error"],
+      "@typescript-eslint/no-floating-promises": ["error",
+        {
+          allowForKnownSafeCalls: [
+            { from: "package", name: ["suite", "test"], package: "node:test" },
+          ],
+        },
+      ],
       "no-restricted-syntax": [
         "error",
         {

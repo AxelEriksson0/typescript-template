@@ -10,7 +10,7 @@
   "dependencies": {
     "@solidjs/router": "^0.15.3",
     "@tailwindcss/vite": "^4.1.16",
-    "daisyui": "^5.3.10",
+    "daisyui": "^5.4.2",
     "solid-js": "^1.9.10",
     "tailwindcss": "^4.1.16"
   },
