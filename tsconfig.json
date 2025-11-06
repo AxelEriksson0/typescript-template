@@ -5,7 +5,7 @@
      * See docs/TSCONFIG.md for more information.
      */
     "allowJs": true,
-    "allowUnreachableCode": true,
+    "allowUnreachableCode": false,
     "composite": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -19,6 +19,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "dist",
+    "rewriteRelativeImportExtensions": true,
     "strict": true,
     /*
      * export enum Suit { Diamonds = "Diamonds", Clovers = "Cloves", Hearts = "Hearts", Spades = "Spades" }

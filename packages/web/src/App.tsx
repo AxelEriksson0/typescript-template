@@ -1,4 +1,4 @@
-import { Navbar } from "./components/Navbar/Navbar"
+import { Navbar } from "./components/Navbar/Navbar.tsx"
 import { m } from "./paraglide/messages.js"
 
 export const App = () => {

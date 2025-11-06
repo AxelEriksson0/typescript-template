@@ -1,5 +1,5 @@
 import { m } from "../../paraglide/messages.js"
-import { LanguageToggle } from "../LanguageToggle/LanguageToggle"
+import { LanguageToggle } from "../LanguageToggle/LanguageToggle.tsx"
 
 export const Navbar = () => {
   return <div class="navbar bg-base-100 shadow-sm">

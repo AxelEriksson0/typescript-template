@@ -1,8 +1,8 @@
 import assert from "node:assert/strict"
 import { it } from "node:test"
 
-import { addTwoNumbers } from "../utils/addTwoNumbers.js"
-import { multiplyTwoNumbers } from "../utils/multiplyTwoNumbers.js"
+import { addTwoNumbers } from "../utils/addTwoNumbers.ts"
+import { multiplyTwoNumbers } from "../utils/multiplyTwoNumbers.ts"
 
 it("addTwoNumbers(5, 10) should return 15", () => {
   const result = addTwoNumbers(5, 10)
