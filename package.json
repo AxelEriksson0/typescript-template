@@ -27,6 +27,7 @@
     "build": "yarn workspaces foreach --all -pt run build",
     "dev": "yarn workspaces foreach --all -pt run dev",
     "lint": "eslint --flag unstable_native_nodejs_ts_config .",
+    "oxlint": "oxlint --type-aware",
     "start": "yarn workspaces foreach --all -pt run start",
     "test": "yarn lint && yarn ut",
     "update": "yarn update:node && yarn update:yarn && yarn update:dependencies",
@@ -45,6 +46,8 @@
     "eslint": "^9.39.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unused-imports": "^4.3.0",
+    "oxlint": "^1.26.0",
+    "oxlint-tsgolint": "^0.5.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.2"
   },

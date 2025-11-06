@@ -33,6 +33,9 @@ Web infrastructure project with SolidJS and DaisyUI.
 - Using ESLint's new configuration system - https://eslint.org/docs/latest/use/configure/configuration-files-new
 - See settings.json for entire ESLint VS Code extension configuration.
 
+### Oxlint
+Oxlint will not be used until custom modification, like the one with no-floating-promise in ESLint can be done.
+
 ### fnm
 
 `fnm` is used and configured to automatically read the `.node-version` file and set the correct `node` version. See https://github.com/Schniz/fnm for more information.
