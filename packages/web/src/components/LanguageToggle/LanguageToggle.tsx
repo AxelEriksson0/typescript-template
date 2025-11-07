@@ -11,10 +11,10 @@ export const LanguageToggle = () => {
     </summary>
     <ul class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
       <li>
-        <a onClick={ () => setLocale("en")}>English</a>
+        <a onClick={ () => setLocale("en")} onKeyDown={() => setLocale("en")}>English</a>
       </li>
       <li>
-        <a onClick={ () => setLocale("sv")}>Svenska</a>
+        <a onClick={ () => setLocale("sv")} onKeyDown={() => setLocale("en")}>Svenska</a>
       </li>
     </ul>
   </details>

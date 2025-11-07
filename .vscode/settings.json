@@ -1,14 +1,6 @@
 {
-  "eslint.execArgv": ["--experimental-strip-types"],
-  "eslint.options": {
-    "flags": ["unstable_native_nodejs_ts_config", "v10_config_lookup_from_file"]
-  },
-  "eslint.useFlatConfig": true,
-  "eslint.useESLintClass": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ]
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "oxc.fmt.experimental": false,
+  "oxc.typeAware": true,
+  "oxc.enable": true,
 }

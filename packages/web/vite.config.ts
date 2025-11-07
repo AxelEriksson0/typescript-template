@@ -1,7 +1,7 @@
-import { paraglideVitePlugin } from "@inlang/paraglide-js"
-import tailwindcss from "@tailwindcss/vite"
 import { defineConfig } from "vite"
+import { paraglideVitePlugin } from "@inlang/paraglide-js"
 import solidPlugin from "vite-plugin-solid"
+import tailwindcss from "@tailwindcss/vite"
 import tsconfigPaths from "vite-tsconfig-paths"
 // import devtools from 'solid-devtools/vite';
 
