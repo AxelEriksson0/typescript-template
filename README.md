@@ -1,6 +1,6 @@
 # TypeScript template
 
-This repository started out as a simple opinionated tsconfig.json template. There was a lot of things to be opinionated about so now it has setups for EsLint, testing, package manager, CI/CD, web setup, traefik infrastructure and more.
+This repository started out as a simple opinionated tsconfig.json template. There was a lot of things to be opinionated about so now it has setups for Oxlint, testing, package manager, CI/CD, web setup, traefik infrastructure and more.
 
 Maybe this repository is too big now...
 
@@ -28,13 +28,11 @@ Web infrastructure project with SolidJS and DaisyUI.
 - Using Yarn as it simplifies adding arguments when running scripts.
 - ESM (requires TypeScript 4.7.0+)
 
-### ESLint
-
-- Using ESLint's new configuration system - https://eslint.org/docs/latest/use/configure/configuration-files-new
-- See settings.json for entire ESLint VS Code extension configuration.
-
 ### Oxlint
-Oxlint will not be used until custom modification, like the one with no-floating-promise in ESLint can be done.
+
+- Using Oxlint as the performance is immense compared to ESLint and the IDE plugin doesn't crash.
+- The main downside is that customization of rules isn't yet possible and no linting of .json or other files.
+- See settings.json for Oxlint (Oxc) VS Code extension configuration.
 
 ### fnm
 

@@ -14,10 +14,9 @@
     "import/namespace": "error",    
     "import/no-commonjs": "error",
     "import/no-cycle": "error",
-    "import/no-default-export": "error",
-    "import/unambiguous": "error",
     "import/no-dynamic-require": "error",
     "jsx-a11y/*": "error",
+    "jsx-a11y/anchor-is-valid": "off",
     "oxc/no-const-enum": "error",
     "promise/*": "error",
     "react/*": "error",
@@ -34,6 +33,11 @@
     "no-empty-function": "error",
     "no-useless-call": "error",
     "no-eq-null": "error",
-    "no-var": "error"
+    "no-var": "error",
+    "prefer-template": "error",
+    "sort-keys": "error",
+    "sort-imports": [
+      "error"
+    ]
   }
 }
