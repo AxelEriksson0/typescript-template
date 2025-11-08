@@ -1,4 +1,4 @@
-import { setLocale } from "../../paraglide/runtime.js";
+import { setLocale } from "../../paraglide/runtime.js"
 
 export const LanguageToggle = () => {
   return (
@@ -26,5 +26,5 @@ export const LanguageToggle = () => {
         </li>
       </ul>
     </details>
-  );
-};
+  )
+}

@@ -1,7 +1,7 @@
 interface ImportMetaEnv {
-  readonly DEV: string;
+  readonly DEV: string
 }
 
 interface ImportMeta {
-  readonly env: ImportMetaEnv;
+  readonly env: ImportMetaEnv
 }

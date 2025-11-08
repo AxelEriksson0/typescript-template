@@ -7,5 +7,5 @@ export const Button = () => {
     >
       {"Click me!"}
     </button>
-  );
-};
+  )
+}

@@ -29,7 +29,7 @@
     "format": "oxfmt .",
     "lint": "oxlint --type-aware",
     "start": "yarn workspaces foreach --all -pt run start",
-    "test": "yarn lint && yarn ut",
+    "test": "yarn format && yarn lint && yarn ut",
     "update": "yarn update:node && yarn update:yarn && yarn update:dependencies",
     "update:dependencies": "npx npm-check-updates --deep --upgrade --install always && yarn && yarn dedupe",
     "update:node": "fnm install \"$(fnm list-remote | tail -n 1)\" && fnm use \"$(fnm list-remote | tail -n 1)\" && fnm list-remote | tail -n 1 > .node-version",
@@ -45,7 +45,7 @@
     "oxlint-tsgolint": "^0.5.1",
     "typescript": "^5.9.3"
   },
-  "packageManager": "yarn@4.10.3",
+  "packageManager": "yarn@4.11.0",
   "engines": {
     "node": ">=24.6.0"
   }

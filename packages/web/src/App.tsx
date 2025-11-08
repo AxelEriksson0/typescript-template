@@ -1,5 +1,5 @@
-import { Navbar } from "./components/Navbar/Navbar.tsx";
-import { m } from "./paraglide/messages.js";
+import { Navbar } from "./components/Navbar/Navbar.tsx"
+import { m } from "./paraglide/messages.js"
 
 export const App = () => {
   return (
@@ -9,5 +9,5 @@ export const App = () => {
         <p class="pt-8 text-3xl">{m.home_page_title()}</p>
       </div>
     </>
-  );
-};
+  )
+}
