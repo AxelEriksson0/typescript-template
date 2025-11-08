@@ -1,6 +1,7 @@
 {
   "editor.defaultFormatter": "oxc.oxc-vscode",
-  "oxc.fmt.experimental": false,
-  "oxc.typeAware": true,
   "oxc.enable": true,
+  "oxc.fmt.configPath": "./.oxfmtrc.json",
+  "oxc.fmt.experimental": true,
+  "oxc.typeAware": true,
 }

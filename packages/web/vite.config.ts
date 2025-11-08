@@ -1,12 +1,12 @@
-import { defineConfig } from "vite"
-import { paraglideVitePlugin } from "@inlang/paraglide-js"
-import solidPlugin from "vite-plugin-solid"
-import tailwindcss from "@tailwindcss/vite"
-import tsconfigPaths from "vite-tsconfig-paths"
+import { defineConfig } from "vite";
+import { paraglideVitePlugin } from "@inlang/paraglide-js";
+import solidPlugin from "vite-plugin-solid";
+import tailwindcss from "@tailwindcss/vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 // import devtools from 'solid-devtools/vite';
 
 export default defineConfig({
-  build: { target: "esnext", },
+  build: { target: "esnext" },
   plugins: [
     /*
     Uncomment the following line to enable solid-devtools.
@@ -30,7 +30,7 @@ export default defineConfig({
     }),
     solidPlugin(),
     tailwindcss(),
-    tsconfigPaths({ root: "./" })
+    tsconfigPaths({ root: "./" }),
   ],
-  server: { port: 5173, },
-})
+  server: { port: 5173 },
+});
