@@ -434,9 +434,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@inlang/paraglide-js@npm:^2.4.0":
-  version: 2.4.0
-  resolution: "@inlang/paraglide-js@npm:2.4.0"
+"@inlang/paraglide-js@npm:^2.5.0":
+  version: 2.5.0
+  resolution: "@inlang/paraglide-js@npm:2.5.0"
   dependencies:
     "@inlang/recommend-sherlock": "npm:0.2.1"
     "@inlang/sdk": "npm:2.4.9"
@@ -447,7 +447,7 @@ __metadata:
     urlpattern-polyfill: "npm:^10.0.0"
   bin:
     paraglide-js: bin/run.js
-  checksum: 10c0/52fe9e1a8c64d098dec8adfccfafa506871a73a8e95d48a0a4df9a2b9e2d90a84a26a679cf2e6844664c88467180970e19608b00dbee156db6d5155fb42ce6ea
+  checksum: 10c0/e5d1585b6d9270be8f8a3e095e126899137efa12b81018ae1730aa5c9f700a26733f1bca61f01199d28a824a12fe81a6b1949cbad3861e1c4eabbc33b054a5bd
   languageName: node
   linkType: hard
 
@@ -604,156 +604,156 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oxfmt/darwin-arm64@npm:0.11.0":
-  version: 0.11.0
-  resolution: "@oxfmt/darwin-arm64@npm:0.11.0"
+"@oxfmt/darwin-arm64@npm:0.15.0":
+  version: 0.15.0
+  resolution: "@oxfmt/darwin-arm64@npm:0.15.0"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@oxfmt/darwin-x64@npm:0.11.0":
-  version: 0.11.0
-  resolution: "@oxfmt/darwin-x64@npm:0.11.0"
+"@oxfmt/darwin-x64@npm:0.15.0":
+  version: 0.15.0
+  resolution: "@oxfmt/darwin-x64@npm:0.15.0"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@oxfmt/linux-arm64-gnu@npm:0.11.0":
-  version: 0.11.0
-  resolution: "@oxfmt/linux-arm64-gnu@npm:0.11.0"
+"@oxfmt/linux-arm64-gnu@npm:0.15.0":
+  version: 0.15.0
+  resolution: "@oxfmt/linux-arm64-gnu@npm:0.15.0"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@oxfmt/linux-arm64-musl@npm:0.11.0":
-  version: 0.11.0
-  resolution: "@oxfmt/linux-arm64-musl@npm:0.11.0"
+"@oxfmt/linux-arm64-musl@npm:0.15.0":
+  version: 0.15.0
+  resolution: "@oxfmt/linux-arm64-musl@npm:0.15.0"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@oxfmt/linux-x64-gnu@npm:0.11.0":
-  version: 0.11.0
-  resolution: "@oxfmt/linux-x64-gnu@npm:0.11.0"
+"@oxfmt/linux-x64-gnu@npm:0.15.0":
+  version: 0.15.0
+  resolution: "@oxfmt/linux-x64-gnu@npm:0.15.0"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@oxfmt/linux-x64-musl@npm:0.11.0":
-  version: 0.11.0
-  resolution: "@oxfmt/linux-x64-musl@npm:0.11.0"
+"@oxfmt/linux-x64-musl@npm:0.15.0":
+  version: 0.15.0
+  resolution: "@oxfmt/linux-x64-musl@npm:0.15.0"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@oxfmt/win32-arm64@npm:0.11.0":
-  version: 0.11.0
-  resolution: "@oxfmt/win32-arm64@npm:0.11.0"
+"@oxfmt/win32-arm64@npm:0.15.0":
+  version: 0.15.0
+  resolution: "@oxfmt/win32-arm64@npm:0.15.0"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@oxfmt/win32-x64@npm:0.11.0":
-  version: 0.11.0
-  resolution: "@oxfmt/win32-x64@npm:0.11.0"
+"@oxfmt/win32-x64@npm:0.15.0":
+  version: 0.15.0
+  resolution: "@oxfmt/win32-x64@npm:0.15.0"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@oxlint-tsgolint/darwin-arm64@npm:0.5.1":
-  version: 0.5.1
-  resolution: "@oxlint-tsgolint/darwin-arm64@npm:0.5.1"
+"@oxlint-tsgolint/darwin-arm64@npm:0.8.3":
+  version: 0.8.3
+  resolution: "@oxlint-tsgolint/darwin-arm64@npm:0.8.3"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@oxlint-tsgolint/darwin-x64@npm:0.5.1":
-  version: 0.5.1
-  resolution: "@oxlint-tsgolint/darwin-x64@npm:0.5.1"
+"@oxlint-tsgolint/darwin-x64@npm:0.8.3":
+  version: 0.8.3
+  resolution: "@oxlint-tsgolint/darwin-x64@npm:0.8.3"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@oxlint-tsgolint/linux-arm64@npm:0.5.1":
-  version: 0.5.1
-  resolution: "@oxlint-tsgolint/linux-arm64@npm:0.5.1"
+"@oxlint-tsgolint/linux-arm64@npm:0.8.3":
+  version: 0.8.3
+  resolution: "@oxlint-tsgolint/linux-arm64@npm:0.8.3"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"@oxlint-tsgolint/linux-x64@npm:0.5.1":
-  version: 0.5.1
-  resolution: "@oxlint-tsgolint/linux-x64@npm:0.5.1"
+"@oxlint-tsgolint/linux-x64@npm:0.8.3":
+  version: 0.8.3
+  resolution: "@oxlint-tsgolint/linux-x64@npm:0.8.3"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"@oxlint-tsgolint/win32-arm64@npm:0.5.1":
-  version: 0.5.1
-  resolution: "@oxlint-tsgolint/win32-arm64@npm:0.5.1"
+"@oxlint-tsgolint/win32-arm64@npm:0.8.3":
+  version: 0.8.3
+  resolution: "@oxlint-tsgolint/win32-arm64@npm:0.8.3"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@oxlint-tsgolint/win32-x64@npm:0.5.1":
-  version: 0.5.1
-  resolution: "@oxlint-tsgolint/win32-x64@npm:0.5.1"
+"@oxlint-tsgolint/win32-x64@npm:0.8.3":
+  version: 0.8.3
+  resolution: "@oxlint-tsgolint/win32-x64@npm:0.8.3"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@oxlint/darwin-arm64@npm:1.26.0":
-  version: 1.26.0
-  resolution: "@oxlint/darwin-arm64@npm:1.26.0"
+"@oxlint/darwin-arm64@npm:1.30.0":
+  version: 1.30.0
+  resolution: "@oxlint/darwin-arm64@npm:1.30.0"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@oxlint/darwin-x64@npm:1.26.0":
-  version: 1.26.0
-  resolution: "@oxlint/darwin-x64@npm:1.26.0"
+"@oxlint/darwin-x64@npm:1.30.0":
+  version: 1.30.0
+  resolution: "@oxlint/darwin-x64@npm:1.30.0"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@oxlint/linux-arm64-gnu@npm:1.26.0":
-  version: 1.26.0
-  resolution: "@oxlint/linux-arm64-gnu@npm:1.26.0"
+"@oxlint/linux-arm64-gnu@npm:1.30.0":
+  version: 1.30.0
+  resolution: "@oxlint/linux-arm64-gnu@npm:1.30.0"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@oxlint/linux-arm64-musl@npm:1.26.0":
-  version: 1.26.0
-  resolution: "@oxlint/linux-arm64-musl@npm:1.26.0"
+"@oxlint/linux-arm64-musl@npm:1.30.0":
+  version: 1.30.0
+  resolution: "@oxlint/linux-arm64-musl@npm:1.30.0"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@oxlint/linux-x64-gnu@npm:1.26.0":
-  version: 1.26.0
-  resolution: "@oxlint/linux-x64-gnu@npm:1.26.0"
+"@oxlint/linux-x64-gnu@npm:1.30.0":
+  version: 1.30.0
+  resolution: "@oxlint/linux-x64-gnu@npm:1.30.0"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@oxlint/linux-x64-musl@npm:1.26.0":
-  version: 1.26.0
-  resolution: "@oxlint/linux-x64-musl@npm:1.26.0"
+"@oxlint/linux-x64-musl@npm:1.30.0":
+  version: 1.30.0
+  resolution: "@oxlint/linux-x64-musl@npm:1.30.0"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@oxlint/win32-arm64@npm:1.26.0":
-  version: 1.26.0
-  resolution: "@oxlint/win32-arm64@npm:1.26.0"
+"@oxlint/win32-arm64@npm:1.30.0":
+  version: 1.30.0
+  resolution: "@oxlint/win32-arm64@npm:1.30.0"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@oxlint/win32-x64@npm:1.26.0":
-  version: 1.26.0
-  resolution: "@oxlint/win32-x64@npm:1.26.0"
+"@oxlint/win32-x64@npm:1.30.0":
+  version: 1.30.0
+  resolution: "@oxlint/win32-x64@npm:1.30.0"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -762,17 +762,6 @@ __metadata:
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
   checksum: 10c0/5bd7576bb1b38a47a7fc7b51ac9f38748e772beebc56200450c4a817d712232b8f1d3ef70532c80840243c657d491cf6a6be1e3a214cff907645819fdc34aadd
-  languageName: node
-  linkType: hard
-
-"@prettier/sync@npm:0.6.1":
-  version: 0.6.1
-  resolution: "@prettier/sync@npm:0.6.1"
-  dependencies:
-    make-synchronized: "npm:^0.8.0"
-  peerDependencies:
-    prettier: "*"
-  checksum: 10c0/4cf6dd8c27f6425924ac749ca980693b447d39162b530e103f4613df470c1ec877f691d10796556b748ce8c954cc76e0f2a73e18e02b125d295168012c25df71
   languageName: node
   linkType: hard
 
@@ -923,12 +912,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@solidjs/router@npm:^0.15.3":
-  version: 0.15.3
-  resolution: "@solidjs/router@npm:0.15.3"
+"@solidjs/router@npm:^0.15.4":
+  version: 0.15.4
+  resolution: "@solidjs/router@npm:0.15.4"
   peerDependencies:
     solid-js: ^1.8.6
-  checksum: 10c0/08464952e497a2a86fd3b568a7c174a296f65771df2460ffb43b623fd27c1b7613bf11200164ca3effcaa658be031429c1a8228effa31ecb53ff4431bb9e2a3b
+  checksum: 10c0/ea5863cd8ae02151bd9f2b371c14e06265ec4796eabd9a09a5d2a81a1b1338348bce17c8206810b331dc4420d9bbe9f87b98121c948db155b8ca3b3281d2e31b
   languageName: node
   linkType: hard
 
@@ -1190,12 +1179,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^24.10.0":
-  version: 24.10.0
-  resolution: "@types/node@npm:24.10.0"
+"@types/node@npm:^24.10.1":
+  version: 24.10.1
+  resolution: "@types/node@npm:24.10.1"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10c0/f82ed7194e16f5590ef7afdc20c6d09068c76d50278b485ede8f0c5749683536e3064ffa8def8db76915196afb3724b854aa5723c64d6571b890b14492943b46
+  checksum: 10c0/d6bca7a78f550fbb376f236f92b405d676003a8a09a1b411f55920ef34286ee3ee51f566203920e835478784df52662b5b2af89159d9d319352e9ea21801c002
   languageName: node
   linkType: hard
 
@@ -1467,10 +1456,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"daisyui@npm:^5.4.7":
-  version: 5.4.7
-  resolution: "daisyui@npm:5.4.7"
-  checksum: 10c0/a37423a14a404559c722393f6b95acfa4764a1a181852ca62518905766c1a1b58f89b1bc733d969e13763602f6da70c16837b84281057b6558720d8363e9139a
+"daisyui@npm:^5.5.5":
+  version: 5.5.5
+  resolution: "daisyui@npm:5.5.5"
+  checksum: 10c0/d199f9ca3699142d91e0716acf2d0c3c6cd4c840a21b431df8cd3b8b79b0b986c2888deffa89d83cc038fe39364467bd966a48b071754df08186ecb3e3905e41
   languageName: node
   linkType: hard
 
@@ -2169,13 +2158,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"make-synchronized@npm:^0.8.0":
-  version: 0.8.0
-  resolution: "make-synchronized@npm:0.8.0"
-  checksum: 10c0/b8293d79e8752840a8103034866296b781c754286bf54864f4014b01f4b46710c5eaa04ffdabd7167513a4e72e7fec4396b36fb5aef16222fd5a268d1b4c041e
-  languageName: node
-  linkType: hard
-
 "merge-anything@npm:^5.1.7":
   version: 5.1.7
   resolution: "merge-anything@npm:5.1.7"
@@ -2348,20 +2330,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"oxfmt@npm:^0.11.0":
-  version: 0.11.0
-  resolution: "oxfmt@npm:0.11.0"
+"oxfmt@npm:^0.15.0":
+  version: 0.15.0
+  resolution: "oxfmt@npm:0.15.0"
   dependencies:
-    "@oxfmt/darwin-arm64": "npm:0.11.0"
-    "@oxfmt/darwin-x64": "npm:0.11.0"
-    "@oxfmt/linux-arm64-gnu": "npm:0.11.0"
-    "@oxfmt/linux-arm64-musl": "npm:0.11.0"
-    "@oxfmt/linux-x64-gnu": "npm:0.11.0"
-    "@oxfmt/linux-x64-musl": "npm:0.11.0"
-    "@oxfmt/win32-arm64": "npm:0.11.0"
-    "@oxfmt/win32-x64": "npm:0.11.0"
-    "@prettier/sync": "npm:0.6.1"
-    prettier: "npm:3.6.2"
+    "@oxfmt/darwin-arm64": "npm:0.15.0"
+    "@oxfmt/darwin-x64": "npm:0.15.0"
+    "@oxfmt/linux-arm64-gnu": "npm:0.15.0"
+    "@oxfmt/linux-arm64-musl": "npm:0.15.0"
+    "@oxfmt/linux-x64-gnu": "npm:0.15.0"
+    "@oxfmt/linux-x64-musl": "npm:0.15.0"
+    "@oxfmt/win32-arm64": "npm:0.15.0"
+    "@oxfmt/win32-x64": "npm:0.15.0"
   dependenciesMeta:
     "@oxfmt/darwin-arm64":
       optional: true
@@ -2381,20 +2361,20 @@ __metadata:
       optional: true
   bin:
     oxfmt: bin/oxfmt
-  checksum: 10c0/b1db3421b653146f3aa9ad01ac182c38d1d50fac63ae981fb1ac19a0146c4dcb88869ed4245b48338071fb75ec301b580a9b69d4d536c20aa25972f4a11dd3bf
+  checksum: 10c0/714c4d0c414c3068e4fb4b8fcdf2d3f4b74273c94d1a4964011a00565be42313f0b89efef2a11cae169343191887116f8516f4e9b20f2a950d21c04fd2dab329
   languageName: node
   linkType: hard
 
-"oxlint-tsgolint@npm:^0.5.1":
-  version: 0.5.1
-  resolution: "oxlint-tsgolint@npm:0.5.1"
+"oxlint-tsgolint@npm:^0.8.3":
+  version: 0.8.3
+  resolution: "oxlint-tsgolint@npm:0.8.3"
   dependencies:
-    "@oxlint-tsgolint/darwin-arm64": "npm:0.5.1"
-    "@oxlint-tsgolint/darwin-x64": "npm:0.5.1"
-    "@oxlint-tsgolint/linux-arm64": "npm:0.5.1"
-    "@oxlint-tsgolint/linux-x64": "npm:0.5.1"
-    "@oxlint-tsgolint/win32-arm64": "npm:0.5.1"
-    "@oxlint-tsgolint/win32-x64": "npm:0.5.1"
+    "@oxlint-tsgolint/darwin-arm64": "npm:0.8.3"
+    "@oxlint-tsgolint/darwin-x64": "npm:0.8.3"
+    "@oxlint-tsgolint/linux-arm64": "npm:0.8.3"
+    "@oxlint-tsgolint/linux-x64": "npm:0.8.3"
+    "@oxlint-tsgolint/win32-arm64": "npm:0.8.3"
+    "@oxlint-tsgolint/win32-x64": "npm:0.8.3"
   dependenciesMeta:
     "@oxlint-tsgolint/darwin-arm64":
       optional: true
@@ -2410,24 +2390,24 @@ __metadata:
       optional: true
   bin:
     tsgolint: bin/tsgolint.js
-  checksum: 10c0/241fe858db9b16654b027824584ed1440c3468e30a8a6dfa8a2082a7c139e1616b1ef80d46b2224c81ff338133d31025c9e60749b3c317b8f08cba21250cfbe6
+  checksum: 10c0/b54f8d862f0261e7a756e4649d5a65e24a64c3e7edf0d785679d9012fd352e84255a9d4f8671ddb69be69fce196c594f1f49d0d07e087d4b4f0e1693b8e09c08
   languageName: node
   linkType: hard
 
-"oxlint@npm:^1.26.0":
-  version: 1.26.0
-  resolution: "oxlint@npm:1.26.0"
+"oxlint@npm:^1.30.0":
+  version: 1.30.0
+  resolution: "oxlint@npm:1.30.0"
   dependencies:
-    "@oxlint/darwin-arm64": "npm:1.26.0"
-    "@oxlint/darwin-x64": "npm:1.26.0"
-    "@oxlint/linux-arm64-gnu": "npm:1.26.0"
-    "@oxlint/linux-arm64-musl": "npm:1.26.0"
-    "@oxlint/linux-x64-gnu": "npm:1.26.0"
-    "@oxlint/linux-x64-musl": "npm:1.26.0"
-    "@oxlint/win32-arm64": "npm:1.26.0"
-    "@oxlint/win32-x64": "npm:1.26.0"
+    "@oxlint/darwin-arm64": "npm:1.30.0"
+    "@oxlint/darwin-x64": "npm:1.30.0"
+    "@oxlint/linux-arm64-gnu": "npm:1.30.0"
+    "@oxlint/linux-arm64-musl": "npm:1.30.0"
+    "@oxlint/linux-x64-gnu": "npm:1.30.0"
+    "@oxlint/linux-x64-musl": "npm:1.30.0"
+    "@oxlint/win32-arm64": "npm:1.30.0"
+    "@oxlint/win32-x64": "npm:1.30.0"
   peerDependencies:
-    oxlint-tsgolint: ">=0.4.0"
+    oxlint-tsgolint: ">=0.8.1"
   dependenciesMeta:
     "@oxlint/darwin-arm64":
       optional: true
@@ -2451,7 +2431,7 @@ __metadata:
   bin:
     oxc_language_server: bin/oxc_language_server
     oxlint: bin/oxlint
-  checksum: 10c0/32fe830c876ada30f4b36e2be19878f38e76bb972d566b38406fc7a33b116e3795033682f39007daf0405fc91980fcae330d65284335bdb0ef3bbc80a71f7c88
+  checksum: 10c0/aa39c7ea46c841a640af1995db6fa714fd1e0b5ccedb21cc8bc8bbae85178b16173ae9d518d8ea7811f95432cddc67a7eaa7294e6f305f68463fadc1842f6d05
   languageName: node
   linkType: hard
 
@@ -2519,15 +2499,6 @@ __metadata:
     picocolors: "npm:^1.1.1"
     source-map-js: "npm:^1.2.1"
   checksum: 10c0/5127cc7c91ed7a133a1b7318012d8bfa112da9ef092dddf369ae699a1f10ebbd89b1b9f25f3228795b84585c72aabd5ced5fc11f2ba467eedf7b081a66fad024
-  languageName: node
-  linkType: hard
-
-"prettier@npm:3.6.2":
-  version: 3.6.2
-  resolution: "prettier@npm:3.6.2"
-  bin:
-    prettier: bin/prettier.cjs
-  checksum: 10c0/488cb2f2b99ec13da1e50074912870217c11edaddedeadc649b1244c749d15ba94e846423d062e2c4c9ae683e2d65f754de28889ba06e697ac4f988d44f45812
   languageName: node
   linkType: hard
 
@@ -2712,7 +2683,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "simple-function-and-test@workspace:packages/simple-function-and-test"
   dependencies:
-    "@types/node": "npm:^24.10.0"
+    "@types/node": "npm:^24.10.1"
     ts-node: "npm:^10.9.2"
     tsx: "npm:^4.20.6"
     typescript: "npm:^5.9.3"
@@ -2962,9 +2933,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "typescript-template@workspace:."
   dependencies:
-    oxfmt: "npm:^0.11.0"
-    oxlint: "npm:^1.26.0"
-    oxlint-tsgolint: "npm:^0.5.1"
+    oxfmt: "npm:^0.15.0"
+    oxlint: "npm:^1.30.0"
+    oxlint-tsgolint: "npm:^0.8.3"
     solid-js: "npm:^1.9.10"
     typescript: "npm:^5.9.3"
   languageName: unknown
@@ -3107,9 +3078,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^7.2.2":
-  version: 7.2.2
-  resolution: "vite@npm:7.2.2"
+"vite@npm:^7.2.4":
+  version: 7.2.4
+  resolution: "vite@npm:7.2.4"
   dependencies:
     esbuild: "npm:^0.25.0"
     fdir: "npm:^6.5.0"
@@ -3158,7 +3129,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 10c0/9c76ee441f8dbec645ddaecc28d1f9cf35670ffa91cff69af7b1d5081545331603f0b1289d437b2fa8dc43cdc77b4d96b5bd9c9aed66310f490cb1a06f9c814c
+  checksum: 10c0/26aa0cad01d6e00f17c837b2a0587ab52f6bd0d0e64606b4220cfc58fa5fa76a4095ef3ea27c886bea542a346363912c4fad9f9462ef1e6757262fedfd5196b2
   languageName: node
   linkType: hard
 
@@ -3179,13 +3150,13 @@ __metadata:
   resolution: "web@workspace:packages/web"
   dependencies:
     "@inlang/cli": "npm:^3.0.12"
-    "@inlang/paraglide-js": "npm:^2.4.0"
-    "@solidjs/router": "npm:^0.15.3"
+    "@inlang/paraglide-js": "npm:^2.5.0"
+    "@solidjs/router": "npm:^0.15.4"
     "@tailwindcss/vite": "npm:^4.1.17"
-    daisyui: "npm:^5.4.7"
+    daisyui: "npm:^5.5.5"
     solid-js: "npm:^1.9.10"
     tailwindcss: "npm:^4.1.17"
-    vite: "npm:^7.2.2"
+    vite: "npm:^7.2.4"
     vite-plugin-solid: "npm:^2.11.10"
     vite-tsconfig-paths: "npm:^5.1.4"
   languageName: unknown
