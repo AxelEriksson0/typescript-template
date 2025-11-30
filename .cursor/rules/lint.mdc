@@ -1,0 +1,5 @@
+---
+alwaysApply: true
+---
+
+- Run "yarn lint" from package.json after making changes.
