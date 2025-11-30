@@ -1,0 +1,5 @@
+---
+alwaysApply: true
+---
+
+- When asked to commit to git, always include untracked files.
