@@ -3,7 +3,7 @@
   "description": "This is a simple web starter template. Use as a base.",
   "type": "module",
   "scripts": {
-    "build": "vite build",
+    "build": "tsgo --noEmit && vite build",
     "start": "vite",
     "watch": "vite"
   },
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@inlang/cli": "^3.0.12",
     "@inlang/paraglide-js": "^2.5.0",
+    "@typescript/native-preview": "^7.0.0-dev.20251202.1",
     "vite": "^7.2.4",
     "vite-plugin-solid": "^2.11.10",
     "vite-tsconfig-paths": "^5.1.4"

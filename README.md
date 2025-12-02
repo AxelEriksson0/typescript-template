@@ -25,8 +25,9 @@ Web infrastructure project with SolidJS and DaisyUI.
 
 ## Structure
 
+- Using experimental TypeScript 7 version.
 - Using Yarn as it simplifies adding arguments when running scripts.
-- ESM (requires TypeScript 4.7.0+)
+- ESM-only.
 
 ### Oxlint
 

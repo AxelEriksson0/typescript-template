@@ -1,4 +1,5 @@
 {
+  "exclude": ["dist", "node_modules"],
   "compilerOptions": {
     /*
      * TODO - Move into packages/web.
@@ -20,6 +21,7 @@
     "noUnusedParameters": true,
     "outDir": "dist",
     "rewriteRelativeImportExtensions": true,
+    "skipLibCheck": true,
     "strict": true,
     /*
      * export enum Suit { Diamonds = "Diamonds", Clovers = "Cloves", Hearts = "Hearts", Spades = "Spades" }
