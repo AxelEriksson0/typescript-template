@@ -3,16 +3,14 @@
   "description": "This includes a simple function and a test. Use as a template for creating new packages.",
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "dev": "node --loader ts-node/esm ./index.ts",
-    "start": "node dist/index.js",
-    "ut": "node --experimental-test-coverage --import tsx --test **/*.test.ts",
-    "watch": "tsc -w"
+    "build": "tsgo",
+    "dev": "node ./index.ts",
+    "start": "node ./index.ts",
+    "ut": "node --experimental-test-coverage --test **/*.test.ts",
+    "watch": "tsgo -w"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
-    "ts-node": "^10.9.2",
-    "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "@typescript/native-preview": "^7.0.0-dev.20251202.1"
   }
 }

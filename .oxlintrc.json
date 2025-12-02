@@ -38,6 +38,7 @@
     "sort-keys": "error",
     "sort-imports": [
       "error"
-    ]
+    ],
+    "typescript/no-namespace": "error"
   }
 }
