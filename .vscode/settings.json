@@ -3,5 +3,5 @@
   "oxc.enable": true,
   "oxc.fmt.configPath": "./.oxfmtrc.json",
   "oxc.fmt.experimental": true,
-  "oxc.typeAware": true,
+  "oxc.typeAware": true
 }

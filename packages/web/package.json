@@ -9,19 +9,19 @@
     "watch": "vite"
   },
   "dependencies": {
-    "@playwright/test": "^1.49.0",
+    "@playwright/test": "^1.57.0",
     "@solidjs/router": "^0.15.4",
-    "@tailwindcss/vite": "^4.1.17",
-    "daisyui": "^5.5.5",
+    "@tailwindcss/vite": "^4.1.18",
+    "daisyui": "^5.5.14",
     "solid-js": "^1.9.10",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "@inlang/cli": "^3.0.12",
-    "@inlang/paraglide-js": "^2.5.0",
-    "@typescript/native-preview": "^7.0.0-dev.20251202.1",
-    "vite": "^7.2.6",
+    "@inlang/paraglide-js": "^2.7.0",
+    "@typescript/native-preview": "^7.0.0-dev.20251221.1",
+    "vite": "^7.3.0",
     "vite-plugin-solid": "^2.11.10",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^6.0.3"
   }
 }

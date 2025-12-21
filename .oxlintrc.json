@@ -1,17 +1,9 @@
 {
   "ignorePatterns": ["**/dist/", "**/node_modules/", "**/paraglide/"],
-  "plugins": [
-    "jsx-a11y",
-    "import",
-    "oxc",
-    "promise",
-    "react",
-    "typescript",
-    "unicorn"
-  ],
+  "plugins": ["jsx-a11y", "import", "oxc", "promise", "react", "typescript", "unicorn"],
   "rules": {
     "import/default": "error",
-    "import/namespace": "error",    
+    "import/namespace": "error",
     "import/no-commonjs": "error",
     "import/no-cycle": "error",
     "import/no-dynamic-require": "error",
@@ -36,9 +28,7 @@
     "no-var": "error",
     "prefer-template": "error",
     "sort-keys": "error",
-    "sort-imports": [
-      "error"
-    ],
+    "sort-imports": ["error"],
     "typescript/no-namespace": "error"
   }
 }

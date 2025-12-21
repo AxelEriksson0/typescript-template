@@ -6,6 +6,6 @@
     "allowJs": true,
     "moduleResolution": "bundler",
     "module": "esnext",
-    "outDir": "./dist",
+    "outDir": "./dist"
   }
 }
