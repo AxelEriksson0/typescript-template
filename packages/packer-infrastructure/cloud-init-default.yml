@@ -3,20 +3,12 @@
 ssh_pwauth: false
 disable_root_opts: no-port-forwarding,no-agent-forwarding,no-X11-forwarding
 
-# Install base packages
+packages:
+  - podman
+  - podman-compose
+
 package_update: true
 package_upgrade: true
-packages:
-  - gnupg
-  - curl
-  - jq
-  - unzip
-  - apparmor
-  - aptitude
-  - lsb-release
-  - ca-certificates
-  - apt-transport-https
-  - unattended-upgrades
-  - apparmor-profiles-extra
-  - logrotate
-  - wget
+
+runcmd:
+  - systemctl --user enable --now podman.socket
