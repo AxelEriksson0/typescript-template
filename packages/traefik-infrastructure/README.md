@@ -4,5 +4,9 @@ https://doc.traefik.io/traefik/ - Traefik is an open-source Application Proxy th
 
 ## Install
 
-- Create Docker network: `docker network create traefik-network`
-- `docker compose up -d`
+You need to have `podman` and `podman-compose` installed.
+
+- Create Podman network: `podman network create traefik-network`
+- `podman-compose up -d`
+- systemctl --user enable --now podman.socket
+- sudo sysctl -w net.ipv4.ip_unprivileged_port_start=80

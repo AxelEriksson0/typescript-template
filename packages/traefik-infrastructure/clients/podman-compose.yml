@@ -1,7 +1,7 @@
 services:
   hello-world:
     container_name: hello-world
-    image: crccheck/hello-world
+    image: docker.io/crccheck/hello-world:latest
     labels:
       - traefik.enable=true
 

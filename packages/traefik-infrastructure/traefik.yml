@@ -19,6 +19,7 @@ global:
 log:
   level: DEBUG
 providers:
+  # Even though we are using Podman, we still need to use the Docker provider.
   docker:
     endpoint: unix:///var/run/docker.sock
     exposedByDefault: false

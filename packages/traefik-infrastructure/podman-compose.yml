@@ -1,7 +1,7 @@
 services:
   traefik:
     container_name: "traefik"
-    image: "traefik:latest"
+    image: "docker.io/library/traefik:latest"
     networks:
       - traefik-network
     ports:
@@ -10,8 +10,10 @@ services:
       - "8080:8080"
     restart: unless-stopped
     volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
-      - ./traefik.yml:/etc/traefik/traefik.yml:ro
+      - "/run/user/1000/podman/podman.sock:/var/run/docker.sock:z"
+      - ./traefik.yml:/etc/traefik/traefik.yml:z
+    security_opt:
+      - label=disable
 
 networks:
   traefik-network:
