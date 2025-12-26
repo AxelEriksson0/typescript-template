@@ -12,6 +12,9 @@ sudo dnf -y install packer
 
 I use Hetzner as my Cloud provider.
 
+## Getting started
+- `packer init .` to initialize the project.
+
 ## Build
 
 ### Set your Hetzner API Token
