@@ -10,3 +10,6 @@ You need to have `podman` and `podman-compose` installed.
 - `podman-compose up -d`
 - systemctl --user enable --now podman.socket
 - sudo sysctl -w net.ipv4.ip_unprivileged_port_start=80
+
+## Future
+I will look into using `Quadlets` over `podman-compose`.

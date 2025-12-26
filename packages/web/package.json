@@ -18,8 +18,8 @@
   },
   "devDependencies": {
     "@inlang/cli": "^3.0.12",
-    "@inlang/paraglide-js": "^2.7.0",
-    "@typescript/native-preview": "^7.0.0-dev.20251221.1",
+    "@inlang/paraglide-js": "^2.7.1",
+    "@typescript/native-preview": "^7.0.0-dev.20251226.1",
     "vite": "^7.3.0",
     "vite-plugin-solid": "^2.11.10",
     "vite-tsconfig-paths": "^6.0.3"
