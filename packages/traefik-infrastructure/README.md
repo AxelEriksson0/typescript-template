@@ -12,7 +12,7 @@ You need to have `podman` installed.
 - `podman network create traefik-network`
 
 ### Enable Podman socket
-enable instead of start makes sure it starts on boot.
+`enable` instead of `start` makes sure it starts on boot.
 - `systemctl --user enable --now podman.socket`
 
 ### Enable IP unprivileged ports
