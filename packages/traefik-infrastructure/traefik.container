@@ -1,0 +1,13 @@
+[Container]
+ContainerName=traefik
+Image=docker.io/library/traefik:latest
+Network=traefik-network
+PublishPort=80:80
+PublishPort=443:443
+PublishPort=8080:8080
+SecurityLabelDisable=true
+Volume=/run/user/1000/podman/podman.sock:/var/run/docker.sock:z
+Volume=./traefik.yml:/etc/traefik/traefik.yml:z
+
+[Service]
+Restart=always
