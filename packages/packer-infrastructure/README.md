@@ -23,3 +23,7 @@ packer build .
 
 ### Build with variables
 - `packer build --var 'ssh_keys=["xxx-xxx-xxx"]' .`
+
+### Installing NodeJS
+Add `- unzip` to the packages array.
+Add `-curl -fsSL https://fnm.vercel.app/install | bash` to the runcmd array.
