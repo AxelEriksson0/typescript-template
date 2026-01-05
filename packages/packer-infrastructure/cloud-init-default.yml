@@ -10,4 +10,5 @@ package_update: true
 package_upgrade: true
 
 runcmd:
+  - loginctl enable-linger $USER
   - systemctl --user enable --now podman.socket
