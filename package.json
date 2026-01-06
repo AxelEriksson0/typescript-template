@@ -37,9 +37,11 @@
     "ut": "yarn workspaces foreach --all run ut"
   },
   "dependencies": {
+    "request": "^2.88.2",
     "solid-js": "^1.9.10"
   },
   "devDependencies": {
+    "@types/request": "^2",
     "oxfmt": "^0.20.0",
     "oxlint": "^1.35.0",
     "oxlint-tsgolint": "^0.10.0"
