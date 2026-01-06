@@ -1,0 +1,9 @@
+---
+trigger: always_on
+---
+
+After making changes, always run the following checks:
+
+- Run "yarn lint" from package.json.
+- Run "yarn build" from package.json.
+- Run "yarn ut" from package.json.

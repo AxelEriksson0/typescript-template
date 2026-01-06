@@ -1,4 +1,5 @@
 # GitLab runner
+
 Early documentation and setup for self-hosted GitLab runners.
 
 Documentation: https://docs.gitlab.com/tutorials/create_register_first_runner/.

@@ -9,17 +9,23 @@ We are using Quadlet to manage the Traefik container.
 You need to have `podman` installed.
 
 ### Create Podman network
+
 - `podman network create traefik-network`
 
 ### Enable Podman socket
+
 `enable` instead of `start` makes sure it starts on boot.
+
 - `systemctl --user enable --now podman.socket`
 
 ### Enable IP unprivileged ports
+
 Podman doesn't allow ports below 1024 by default.
+
 - `sudo sysctl -w net.ipv4.ip_unprivileged_port_start=80`
 
 Move the Quadlet files (traefik.yml, traefik.container and traefik.network) to the correct location:
+
 - ~/.config/containers/systemd/
 
 - `systemctl --user daemon-reload`
