@@ -13,7 +13,6 @@
     "@solidjs/router": "^0.15.4",
     "@tailwindcss/vite": "^4.1.18",
     "daisyui": "^5.5.14",
-    "request": "^2.88.2",
     "solid-js": "^1.9.10",
     "tailwindcss": "^4.1.18"
   },

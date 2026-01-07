@@ -42,3 +42,6 @@ Web infrastructure project with SolidJS and DaisyUI.
 ### npm-check-updates
 
 `npm-check-updates` helps automatically updating the dependencies in the project. Will most likely not be used in a real project because they can be very sensitive to updating dependencies, even minor ones.
+
+### Aikido
+Aikido is used for security scanning - https://www.aikido.dev/.
