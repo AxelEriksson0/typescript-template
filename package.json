@@ -40,7 +40,6 @@
     "solid-js": "^1.9.10"
   },
   "devDependencies": {
-    "@aikidosec/ci-api-client": "^1.0.11",
     "@types/request": "^2",
     "oxfmt": "^0.20.0",
     "oxlint": "^1.35.0",
