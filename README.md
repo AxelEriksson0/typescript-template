@@ -45,3 +45,7 @@ Web infrastructure project with SolidJS and DaisyUI.
 
 ### Aikido
 Aikido is used for security scanning - https://www.aikido.dev/.
+
+The repository is configured to check pull requests and only fails when new issues are introduced, not when existing issues are present.
+
+If you want to fail on all issues you need to use the Aikido CLI - https://help.aikido.dev/container-image-scanning/local-image-scanning/pr-and-release-gating-using-local-image-scanner
