@@ -3,6 +3,7 @@ Using Antigravity, not all configurations and rules can be set through config bu
 ## Terminal
 
 ### Allow List Terminal Commands
+
 - `git add -A`
 - `git commit -m ""`
 - `git diff`
@@ -15,4 +16,5 @@ Using Antigravity, not all configurations and rules can be set through config bu
 - `yarn ut`
 
 ## Automation
+
 Agent Auto-Fix Lints ✅
