@@ -2861,6 +2861,7 @@ __metadata:
     "@playwright/test": "npm:^1.57.0"
     "@solidjs/router": "npm:^0.15.4"
     "@tailwindcss/vite": "npm:^4.1.18"
+    "@types/node": "npm:^25.0.6"
     "@typescript/native-preview": "npm:^7.0.0-dev.20260112.1"
     daisyui: "npm:^5.5.14"
     solid-js: "npm:^1.9.10"
