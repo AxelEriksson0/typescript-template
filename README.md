@@ -31,6 +31,8 @@ Web infrastructure project with SolidJS and DaisyUI.
 
 ### Oxlint
 
+Update: Oxc IDE extension has since version 1.36.0 removed the executable binaries in the plugin. Therefore you should pin your version to 1.34.0 until they've resolved https://github.com/oxc-project/oxc/discussions/17959.
+
 - Using Oxlint as the performance is immense compared to ESLint and the IDE plugin doesn't crash.
 - The main downside is that customization of rules isn't yet possible and no linting of .json or other files.
 - See settings.json for Oxlint (Oxc) VS Code extension configuration.
