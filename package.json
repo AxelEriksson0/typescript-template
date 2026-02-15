@@ -40,9 +40,9 @@
     "solid-js": "^1.9.11"
   },
   "devDependencies": {
-    "oxfmt": "^0.26.0",
-    "oxlint": "^1.41.0",
-    "oxlint-tsgolint": "^0.11.1"
+    "oxfmt": "^0.32.0",
+    "oxlint": "^1.47.0",
+    "oxlint-tsgolint": "^0.12.2"
   },
   "engines": {
     "node": ">=24.6.0"
