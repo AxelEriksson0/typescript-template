@@ -1,8 +1,12 @@
 {
   "files.autoSave": "onFocusChange",
   "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "oxc.fmt.configPath": ".oxfmtrc.json",
+  "oxc.path.oxfmt": "./node_modules/oxfmt/bin/oxfmt",
+  "oxc.path.oxlint": "./node_modules/oxlint/bin/oxlint",
   "oxc.enable": true,
-  "oxc.fmt.configPath": "./.oxfmtrc.json",
   "oxc.typeAware": true,
   "typescript.experimental.useTsgo": true
 }
