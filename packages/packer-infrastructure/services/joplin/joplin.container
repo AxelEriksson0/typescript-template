@@ -1,0 +1,27 @@
+[Unit]
+Description=Joplin Server
+After=network-online.target
+
+[Container]
+Image=docker.io/joplin/server:latest
+Volume=joplin-data:/home/joplin/.config/joplin-server
+Environment=APP_BASE_URL=https://JOPLIN_HOST/joplin
+Environment=DB_CLIENT=sqlite3
+Label=traefik.enable=true
+Label=traefik.http.middlewares.joplin-strip.stripprefix.prefixes=/joplin
+Label=traefik.http.routers.joplin-http.entrypoints=web
+Label=traefik.http.routers.joplin-http.rule=Host(`JOPLIN_HOST`) && PathPrefix(`/joplin`)
+Label=traefik.http.routers.joplin-http.middlewares=joplin-strip
+Label=traefik.http.services.joplin-http.loadbalancer.server.port=22300
+Label=traefik.http.routers.joplin-https.entrypoints=websecure
+Label=traefik.http.routers.joplin-https.rule=Host(`JOPLIN_HOST`) && PathPrefix(`/joplin`)
+Label=traefik.http.routers.joplin-https.middlewares=joplin-strip
+Label=traefik.http.routers.joplin-https.tls=true
+Label=traefik.http.routers.joplin-https.tls.certresolver=letsencrypt
+Network=traefik-network
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
