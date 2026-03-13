@@ -10,7 +10,7 @@
     "watch": "tsgo -w"
   },
   "devDependencies": {
-    "@types/node": "^25.3.5",
-    "@typescript/native-preview": "^7.0.0-dev.20260308.1"
+    "@types/node": "^25.4.0",
+    "@typescript/native-preview": "^7.0.0-dev.20260311.1"
   }
 }

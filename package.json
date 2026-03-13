@@ -28,6 +28,7 @@
     "dev": "yarn workspaces foreach --all -pt run dev",
     "format": "oxfmt .",
     "lint": "oxlint --type-aware",
+    "prepare": "lefthook install",
     "start": "yarn workspaces foreach --all -pt run start",
     "test": "yarn format && yarn lint && yarn ut",
     "update": "yarn update:node && yarn update:yarn && yarn update:dependencies",
@@ -40,8 +41,9 @@
     "solid-js": "^1.9.11"
   },
   "devDependencies": {
-    "oxfmt": "^0.36.0",
-    "oxlint": "^1.51.0",
+    "lefthook": "^2.1.3",
+    "oxfmt": "^0.38.0",
+    "oxlint": "^1.53.0",
     "oxlint-tsgolint": "^0.16.0"
   },
   "engines": {

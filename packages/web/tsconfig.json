@@ -1,6 +1,6 @@
 {
   "extends": "../../tsconfig.json",
-  "exclude": ["paraglide"],
+  "exclude": ["dist", "node_modules", "paraglide"],
   "include": ["**/*.ts", "**/*.tsx", "*.ts", "*.tsx", "*.js", "**/*.js"],
   "compilerOptions": {
     "allowJs": true,

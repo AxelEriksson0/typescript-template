@@ -56,6 +56,7 @@ Joplin Server — a self-hosted note-taking sync server.
 Access at `https://<server-ip>/joplin`
 
 Default credentials:
+
 - **Email:** `admin@localhost`
 - **Password:** `admin`
 

@@ -1,0 +1,9 @@
+pre-commit:
+  parallel: true
+  commands:
+    format:
+      run: yarn format
+    lint:
+      run: yarn lint
+    build:
+      run: yarn build

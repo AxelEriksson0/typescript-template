@@ -3,6 +3,7 @@
   "include": ["**/*.ts", "*.ts"],
   "exclude": ["dist", "node_modules"],
   "compilerOptions": {
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "types": ["node"]
   }
 }
