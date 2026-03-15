@@ -6,8 +6,9 @@ PublishPort=80:80
 PublishPort=443:443
 PublishPort=8080:8080
 SecurityLabelDisable=true
-Volume=/run/user/1000/podman/podman.sock:/var/run/docker.sock:z
+Volume=/run/user/0/podman/podman.sock:/var/run/docker.sock:z
 Volume=./traefik.yml:/etc/traefik/traefik.yml:z
+Volume=./acme.json:/etc/traefik/acme.json:z
 
 [Service]
 Restart=always

@@ -13,10 +13,10 @@ Services are deployed post-boot using scripts in the `services/` directory. The 
 Joplin Server — a self-hosted note-taking sync server.
 
 ```bash
-./services/deploy.sh joplin root@<server-ip> <server-ip>
+./services/deploy.sh joplin root@<server-ip> example.com
 ```
 
-Access at `https://<server-ip>/joplin`
+Access at `https://example.com/joplin`
 
 Default credentials:
 
@@ -33,10 +33,10 @@ Data is persisted in the `joplin-data` Podman volume at:
 NextCloud — a self-hosted file sync and sharing platform.
 
 ```bash
-./services/deploy.sh nextcloud root@<server-ip> <server-ip>
+./services/deploy.sh nextcloud root@<server-ip> example.com
 ```
 
-Access at `https://<server-ip>/nextcloud`
+Access at `https://example.com/nextcloud`
 
 Admin credentials are set during the first-run setup wizard.
 

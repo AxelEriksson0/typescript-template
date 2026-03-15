@@ -26,7 +26,7 @@ providers:
 certificatesResolvers:
   letsencrypt:
     acme:
-      email: axeleriksson0@gmail.com
+      email: TRAEFIK_EMAIL
       storage: acme.json
       httpChallenge:
         entryPoint: web

@@ -4,30 +4,36 @@ https://doc.traefik.io/traefik/ - Traefik is an open-source Application Proxy th
 
 We are using Quadlet to manage the Traefik container.
 
-## Install
+## Deploy
 
-You need to have `podman` installed.
+```bash
+./deploy.sh <user@host> <domain> <email>
+```
 
-### Create Podman network
+Example:
 
-- `podman network create traefik-network`
+```bash
+./deploy.sh root@1.2.3.4 example.com admin@example.com
+```
+
+This copies all Quadlet files to the server, substitutes the ACME email, initialises `acme.json`, and starts the service. TLS certificates for `<domain>` are issued automatically by Let's Encrypt on the first HTTPS request.
+
+## Server prerequisites
+
+These need to be run once on the server before deploying.
 
 ### Enable Podman socket
 
 `enable` instead of `start` makes sure it starts on boot.
 
-- `systemctl --user enable --now podman.socket`
+```bash
+systemctl --user enable --now podman.socket
+```
 
-### Enable IP unprivileged ports
+### Enable unprivileged ports
 
 Podman doesn't allow ports below 1024 by default.
 
-- `sudo sysctl -w net.ipv4.ip_unprivileged_port_start=80`
-
-Move the Quadlet files (traefik.yml, traefik.container and traefik.network) to the correct location:
-
-- ~/.config/containers/systemd/
-
-- `systemctl --user daemon-reload`
-- `systemctl --user start traefik.service`
-- `systemctl --user start traefik.network`
+```bash
+sudo sysctl -w net.ipv4.ip_unprivileged_port_start=80
+```
