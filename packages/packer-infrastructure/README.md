@@ -37,30 +37,4 @@ Add `-curl -fsSL https://fnm.vercel.app/install | bash` to the runcmd array.
 
 ## Services
 
-Services are deployed post-boot using scripts in the `services/` directory. The base image is not modified.
-
-### Deploy a service
-
-```bash
-./services/deploy.sh <service> <user@host> [install-args...]
-```
-
-### Joplin
-
-Joplin Server — a self-hosted note-taking sync server.
-
-```bash
-./services/deploy.sh joplin root@<server-ip> <server-ip>
-```
-
-Access at `https://<server-ip>/joplin`
-
-Default credentials:
-
-- **Email:** `admin@localhost`
-- **Password:** `admin`
-
-You will be prompted to change the password on first login.
-
-Data is persisted in the `joplin-data` Podman volume at:
-`/root/.local/share/containers/storage/volumes/joplin-data/_data/`
+See [services/README.md](services/README.md).

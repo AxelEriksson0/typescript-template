@@ -10,12 +10,13 @@ Environment=DB_CLIENT=sqlite3
 Label=traefik.enable=true
 Label=traefik.http.middlewares.joplin-strip.stripprefix.prefixes=/joplin
 Label=traefik.http.routers.joplin-http.entrypoints=web
-Label=traefik.http.routers.joplin-http.rule=Host(`JOPLIN_HOST`) && PathPrefix(`/joplin`)
+Label=traefik.http.routers.joplin-http.rule=Host(`JOPLIN_HOST`)&&PathPrefix(`/joplin`)
 Label=traefik.http.routers.joplin-http.middlewares=joplin-strip
 Label=traefik.http.services.joplin-http.loadbalancer.server.port=22300
 Label=traefik.http.routers.joplin-https.entrypoints=websecure
-Label=traefik.http.routers.joplin-https.rule=Host(`JOPLIN_HOST`) && PathPrefix(`/joplin`)
+Label=traefik.http.routers.joplin-https.rule=Host(`JOPLIN_HOST`)&&PathPrefix(`/joplin`)
 Label=traefik.http.routers.joplin-https.middlewares=joplin-strip
+Label=traefik.http.routers.joplin-https.service=joplin-http
 Label=traefik.http.routers.joplin-https.tls=true
 Label=traefik.http.routers.joplin-https.tls.certresolver=letsencrypt
 Network=traefik-network
