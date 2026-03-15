@@ -3,6 +3,7 @@ Debug self-hosted infrastructure settings by SSHing into the server.
 ## Step 1 — read connection details from .env
 
 Before doing anything, read `packages/packer-infrastructure/.env` to get:
+
 - `SERVER_IP` — the server's IP address
 - `SERVER_USER` — the SSH username
 
