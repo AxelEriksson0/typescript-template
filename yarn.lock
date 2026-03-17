@@ -1312,6 +1312,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"coding-template@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "coding-template@workspace:."
+  dependencies:
+    lefthook: "npm:^2.1.4"
+    oxfmt: "npm:^0.41.0"
+    oxlint: "npm:^1.56.0"
+    oxlint-tsgolint: "npm:^0.17.0"
+    solid-js: "npm:^1.9.11"
+  languageName: unknown
+  linkType: soft
+
 "commander@npm:11.1.0":
   version: 11.1.0
   resolution: "commander@npm:11.1.0"
@@ -2776,18 +2788,6 @@ __metadata:
   checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
   languageName: node
   linkType: hard
-
-"typescript-template@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "typescript-template@workspace:."
-  dependencies:
-    lefthook: "npm:^2.1.4"
-    oxfmt: "npm:^0.41.0"
-    oxlint: "npm:^1.56.0"
-    oxlint-tsgolint: "npm:^0.17.0"
-    solid-js: "npm:^1.9.11"
-  languageName: unknown
-  linkType: soft
 
 "undici-types@npm:~7.18.0":
   version: 7.18.2
