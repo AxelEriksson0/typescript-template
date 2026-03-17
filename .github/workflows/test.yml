@@ -1,4 +1,4 @@
-name: Run Unit Tests
+name: Build, Lint and Test
 
 on:
   push:
@@ -27,8 +27,11 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
-      - name: Run linting
+      - name: Build
+        run: yarn build
+
+      - name: Lint
         run: yarn lint
 
-      - name: Run unit tests
+      - name: Unit tests
         run: yarn ut

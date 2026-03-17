@@ -22,7 +22,6 @@
     "@types/node": "^25.5.0",
     "@typescript/native-preview": "^7.0.0-dev.20260317.1",
     "vite": "^8.0.0",
-    "vite-plugin-solid": "^2.11.11",
-    "vite-tsconfig-paths": "^6.1.1"
+    "vite-plugin-solid": "^2.11.11"
   }
 }

@@ -2,7 +2,6 @@ import { defineConfig } from "vite"
 import { paraglideVitePlugin } from "@inlang/paraglide-js"
 import solidPlugin from "vite-plugin-solid"
 import tailwindcss from "@tailwindcss/vite"
-import tsconfigPaths from "vite-tsconfig-paths"
 // import devtools from 'solid-devtools/vite';
 
 export default defineConfig({
@@ -30,7 +29,7 @@ export default defineConfig({
     }),
     solidPlugin(),
     tailwindcss(),
-    tsconfigPaths({ root: "./" }),
   ],
+  resolve: { tsconfigPaths: true },
   server: { port: 5173 },
 })
