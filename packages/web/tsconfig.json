@@ -4,6 +4,7 @@
   "include": ["**/*.ts", "**/*.tsx", "*.ts", "*.tsx", "*.js", "**/*.js"],
   "compilerOptions": {
     "allowJs": true,
+    "checkJs": true,
     "moduleResolution": "bundler",
     "module": "esnext",
     "outDir": "./dist"
