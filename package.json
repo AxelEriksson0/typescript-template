@@ -1,22 +1,22 @@
 {
-  "name": "typescript-template",
+  "name": "coding-template",
   "version": "2.0.0",
-  "description": "My opinionated TypeScript template",
+  "description": "My opinionated coding template",
   "keywords": [
     "oxlint",
     "template",
     "typescript",
     "yarn"
   ],
-  "homepage": "https://github.com/AxelEriksson0/typescript-template#readme",
+  "homepage": "https://github.com/AxelEriksson0/coding-template#readme",
   "bugs": {
-    "url": "https://github.com/AxelEriksson0/typescript-template/issues"
+    "url": "https://github.com/AxelEriksson0/coding-template/issues"
   },
   "license": "MIT",
   "author": "Axel Eriksson",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AxelEriksson0/typescript-template.git"
+    "url": "git+https://github.com/AxelEriksson0/coding-template.git"
   },
   "workspaces": [
     "packages/simple-function-and-test",

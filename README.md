@@ -1,8 +1,6 @@
-# TypeScript template
+# Coding template
 
-This repository started out as a simple opinionated tsconfig.json template. There was a lot of things to be opinionated about so now it has setups for Oxlint, testing, package manager, CI/CD, web setup, traefik infrastructure and more.
-
-Maybe this repository is too big now...
+This repository started out as a simple opinionated tsconfig.json template. However, there were a lot of things to be opinionated about so now it has setups for Oxlint, testing, package manager, CI/CD, web setup, traefik infrastructure, AI coding and more.
 
 ## Setup
 
