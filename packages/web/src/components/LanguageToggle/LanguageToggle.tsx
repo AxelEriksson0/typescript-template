@@ -10,12 +10,30 @@ export const LanguageToggle = () => {
       </summary>
       <ul class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
         <li>
-          <button onClick={() => setLocale("en")} onKeyDown={() => setLocale("en")}>
+          <button
+            onClick={() => {
+              // oxlint-disable-next-line typescript/no-floating-promises
+              setLocale("en")
+            }}
+            onKeyDown={() => {
+              // oxlint-disable-next-line typescript/no-floating-promises
+              setLocale("en")
+            }}
+          >
             English
           </button>
         </li>
         <li>
-          <button onClick={() => setLocale("sv")} onKeyDown={() => setLocale("sv")}>
+          <button
+            onClick={() => {
+              // oxlint-disable-next-line typescript/no-floating-promises
+              setLocale("sv")
+            }}
+            onKeyDown={() => {
+              // oxlint-disable-next-line typescript/no-floating-promises
+              setLocale("sv")
+            }}
+          >
             Svenska
           </button>
         </li>

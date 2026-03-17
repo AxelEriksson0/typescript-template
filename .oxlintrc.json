@@ -1,5 +1,8 @@
 {
   "ignorePatterns": ["**/dist/", "**/node_modules/", "**/paraglide/"],
+  "options": {
+    "typeAware": true
+  },
   "plugins": ["jsx-a11y", "import", "oxc", "promise", "react", "typescript", "unicorn"],
   "rules": {
     "import/default": "error",
@@ -26,9 +29,39 @@
     "no-useless-call": "error",
     "no-eq-null": "error",
     "no-var": "error",
+    "prefer-const": "error",
     "prefer-template": "error",
     "sort-keys": "error",
     "sort-imports": ["error"],
-    "typescript/no-namespace": "error"
+    "typescript/await-thenable": "error",
+    "typescript/consistent-type-exports": "error",
+    "typescript/no-array-delete": "error",
+    "typescript/no-confusing-void-expression": "error",
+    "typescript/no-deprecated": "error",
+    "typescript/no-duplicate-type-constituents": "error",
+    "typescript/no-floating-promises": "error",
+    "typescript/no-misused-promises": "error",
+    "typescript/no-misused-spread": "error",
+    "typescript/no-redundant-type-constituents": "error",
+    "typescript/no-unnecessary-boolean-literal-compare": "error",
+    "typescript/no-unnecessary-condition": "error",
+    "typescript/no-unnecessary-template-expression": "error",
+    "typescript/no-unsafe-argument": "error",
+    "typescript/no-unsafe-assignment": "error",
+    "typescript/no-unsafe-call": "error",
+    "typescript/no-unsafe-member-access": "error",
+    "typescript/no-unsafe-return": "error",
+    "typescript/no-useless-default-assignment": "error",
+    "typescript/non-nullable-type-assertion-style": "error",
+    "typescript/only-throw-error": "error",
+    "typescript/prefer-find": "error",
+    "typescript/prefer-includes": "error",
+    "typescript/prefer-nullish-coalescing": "error",
+    "typescript/prefer-promise-reject-errors": "error",
+    "typescript/prefer-optional-chain": "error",
+    "typescript/prefer-string-starts-ends-with": "error",
+    "typescript/promise-function-async": "error",
+    "typescript/require-array-sort-compare": "error",
+    "typescript/require-await": "error"
   }
 }

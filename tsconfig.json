@@ -28,6 +28,7 @@
      * Object.keys(Suit).forEach((suit: Suit)) would not work when strictFunctionTypes: true
      */
     "strictFunctionTypes": false,
+    "strictNullChecks": true,
     "target": "ESNext"
   }
 }
