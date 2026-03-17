@@ -9,5 +9,5 @@
   "oxc.path.oxlint": "./node_modules/oxlint/bin/oxlint",
   "oxc.path.tsgolint": "./node_modules/oxlint-tsgolint/bin/tsgolint.js",
   "oxc.enable": true,
-  "oxc.typeAware": true,
+  "oxc.typeAware": true
 }
