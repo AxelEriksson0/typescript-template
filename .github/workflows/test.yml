@@ -34,11 +34,4 @@ jobs:
         run: yarn lint
 
       - name: Unit tests
-        run: yarn ut | tee coverage.txt
-
-      - name: Upload coverage report
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-report
-          path: coverage.txt
-          if-no-files-found: warn
+        run: yarn ut
