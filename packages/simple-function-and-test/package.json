@@ -6,7 +6,7 @@
     "build": "tsgo",
     "dev": "node ./index.ts",
     "start": "node ./index.ts",
-    "ut": "node --experimental-test-coverage --coverage-reporter=text --coverage-reporter=lcov --test **/*.test.ts",
+    "ut": "node --experimental-test-coverage --test **/*.test.ts",
     "watch": "tsgo -w"
   },
   "devDependencies": {
