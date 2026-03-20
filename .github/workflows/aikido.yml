@@ -20,8 +20,8 @@ jobs:
           secret-key: ${{ secrets.AIKIDO_SECRET_KEY }}
           fail-on-timeout: true
           fail-on-dependency-scan: true
-          fail-on-sast-scan: false
-          fail-on-iac-scan: false
+          fail-on-sast-scan: true
+          fail-on-iac-scan: true
           minimum-severity: "MEDIUM"
           timeout-seconds: 180
           post-scan-status-comment: "off"
