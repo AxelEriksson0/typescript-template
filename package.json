@@ -38,13 +38,13 @@
     "ut": "yarn workspaces foreach --all run ut"
   },
   "dependencies": {
-    "solid-js": "^1.9.11"
+    "solid-js": "^1.9.12"
   },
   "devDependencies": {
     "lefthook": "^2.1.4",
-    "oxfmt": "^0.41.0",
-    "oxlint": "^1.56.0",
-    "oxlint-tsgolint": "^0.17.0"
+    "oxfmt": "^0.42.0",
+    "oxlint": "^1.57.0",
+    "oxlint-tsgolint": "^0.18.1"
   },
   "engines": {
     "node": ">=24.6.0"

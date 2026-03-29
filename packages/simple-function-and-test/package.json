@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@types/node": "^25.5.0",
-    "@typescript/native-preview": "^7.0.0-dev.20260317.1",
-    "solid-js": "^1.9.11"
+    "@typescript/native-preview": "^7.0.0-dev.20260329.1",
+    "solid-js": "^1.9.12"
   }
 }

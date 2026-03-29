@@ -10,18 +10,18 @@
   },
   "dependencies": {
     "@playwright/test": "^1.58.2",
-    "@solidjs/router": "^0.15.4",
-    "@tailwindcss/vite": "^4.2.1",
+    "@solidjs/router": "^0.16.1",
+    "@tailwindcss/vite": "^4.2.2",
     "daisyui": "^5.5.19",
-    "solid-js": "^1.9.11",
-    "tailwindcss": "^4.2.1"
+    "solid-js": "^1.9.12",
+    "tailwindcss": "^4.2.2"
   },
   "devDependencies": {
-    "@inlang/cli": "^3.1.7",
-    "@inlang/paraglide-js": "^2.15.0",
+    "@inlang/cli": "^3.1.9",
+    "@inlang/paraglide-js": "^2.15.1",
     "@types/node": "^25.5.0",
-    "@typescript/native-preview": "^7.0.0-dev.20260317.1",
-    "vite": "^8.0.0",
+    "@typescript/native-preview": "^7.0.0-dev.20260329.1",
+    "vite": "^8.0.3",
     "vite-plugin-solid": "^2.11.11"
   }
 }
