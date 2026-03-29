@@ -10,6 +10,7 @@ QUADLET_DIR="$HOME/.config/containers/systemd"
 HOST=${1:-"localhost"}
 
 mkdir -p "$QUADLET_DIR"
+mkdir -p /srv/jellyfin/movies /srv/jellyfin/tv
 
 sed "s|JELLYFIN_HOST|$HOST|g" \
   "$SCRIPT_DIR/jellyfin.container" > "$QUADLET_DIR/jellyfin.container"

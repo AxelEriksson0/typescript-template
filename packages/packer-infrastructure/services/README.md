@@ -61,6 +61,15 @@ Access at `https://example.com/jellyfin`
 
 The setup wizard runs on first access to configure your media libraries and admin account.
 
+### Uploading media
+
+```bash
+./services/jellyfin/upload-media.sh ~/Movies root@<server-ip> movies
+./services/jellyfin/upload-media.sh ~/TV root@<server-ip> tv
+```
+
+Media is stored on the server under `/srv/jellyfin/movies` and `/srv/jellyfin/tv`.
+
 Data is persisted in two Podman volumes:
 
 - `jellyfin-config` at `/root/.local/share/containers/storage/volumes/jellyfin-config/_data/`
@@ -78,4 +87,4 @@ This requires a `jellyfin.example.com` DNS record pointing to the server. The su
 
 ### Samsung TV
 
-The official Jellyfin app is not available on the Samsung app store. Use [Samsung-Jellyfin-Installer](https://github.com/Jellyfin2Samsung/Samsung-Jellyfin-Installer) to sideload it.
+The official Jellyfin app is not available on all TVs. For some Samsung TVs, use [Samsung-Jellyfin-Installer](https://github.com/Jellyfin2Samsung/Samsung-Jellyfin-Installer) to sideload it.

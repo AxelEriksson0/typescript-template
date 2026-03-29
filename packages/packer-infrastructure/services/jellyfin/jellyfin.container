@@ -6,7 +6,8 @@ After=network-online.target
 Image=docker.io/jellyfin/jellyfin:latest
 Volume=jellyfin-config:/config
 Volume=jellyfin-cache:/cache
-Volume=/srv/jellyfin-media:/media:ro
+Volume=/srv/jellyfin/movies:/media/movies
+Volume=/srv/jellyfin/tv:/media/tv
 Environment=JELLYFIN_PublishedServerUrl=https://jellyfin.JELLYFIN_HOST
 Label=traefik.enable=true
 Label=traefik.http.middlewares.jellyfin-strip.stripprefix.prefixes=/jellyfin
