@@ -2,7 +2,7 @@ Debug self-hosted infrastructure settings by SSHing into the server.
 
 ## Step 1 — read connection details from .env
 
-Before doing anything, read `packages/packer-infrastructure/.env` to get:
+Before doing anything, read `packages/server-infrastructure/.env` to get:
 
 - `SERVER_IP` — the server's IP address
 - `SERVER_USER` — the SSH username
@@ -14,7 +14,7 @@ Use these to construct the SSH command: `ssh $SERVER_USER@$SERVER_IP`
 - **Nextcloud** — file sync/storage
 - **Joplin** — note syncing server
 
-Service config files live in `packages/packer-infrastructure/services/`.
+Service config files live in `packages/self-hosted-infrastructure/services/`.
 
 ## Debugging steps
 
@@ -28,7 +28,7 @@ Service config files live in `packages/packer-infrastructure/services/`.
 ## Common issues
 
 - If a container is not running, check `podman ps -a` to see stopped containers and their exit codes.
-- Container configs (`.container` files) live in `packages/packer-infrastructure/services/`.
+- Container configs (`.container` files) live in `packages/self-hosted-infrastructure/services/`.
 - After changing a `.container` file on the server, reload with: `systemctl daemon-reload && systemctl restart <service>`
 
 When the user asks to debug server settings, first read `.env`, then SSH in and run the relevant diagnostic commands using the Bash tool, then report findings.
