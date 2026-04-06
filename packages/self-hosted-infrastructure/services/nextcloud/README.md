@@ -26,13 +26,16 @@ Enter `/mnt/nextcloud_backup` as the backup location in the wizard, then enable 
 ## Known issues and workarounds
 
 ### Container must be named exactly `nextcloud-aio-mastercontainer`
+
 AIO checks its own container name on startup and refuses to run with any other name.
 `ContainerName=nextcloud-aio-mastercontainer` is required in the Quadlet file.
 
 ### AIO requires a dedicated subdomain
+
 AIO cannot run under a path prefix (e.g. `a54l.se/nextcloud`). It must own the root of a domain.
 
 ### `serversTransports` cannot be defined via Docker labels
+
 Traefik does not support defining `serversTransports` through Docker provider labels. The `aio-insecure` transport label will be silently ignored and the router disabled with an error. The workaround is to add `insecureSkipVerify: true` globally to Traefik's static config (`traefik.yml`):
 
 ```yaml
@@ -43,6 +46,7 @@ serversTransport:
 This is needed because the AIO management UI serves HTTPS with a self-signed certificate.
 
 ### Domain validation fails behind Cloudflare proxy
+
 AIO tries to validate that the domain points directly to the server. When the DNS record goes through Cloudflare's proxy (orange cloud), this check fails. `SKIP_DOMAIN_VALIDATION=true` bypasses it.
 
 ### Traefik 3.6.4+ breaks Collabora WebSocket connections
@@ -64,6 +68,7 @@ Reference: https://www.reddit.com/r/NextCloud/comments/1lih9r1/traefik_v364_brea
 This is already applied in [traefik.yml](../../../traefik-infrastructure/traefik.yml).
 
 ### Port conflicts on this server
+
 - Port `8080` — taken by Traefik's dashboard entrypoint
 - Port `8888` — taken by MediaMTX
 
