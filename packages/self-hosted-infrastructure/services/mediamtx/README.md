@@ -12,12 +12,12 @@ MediaMTX is a relay, not a transcoder. OBS must encode as **H264 + AAC** (the de
 
 ## Ports
 
-| Port | Protocol | Purpose             |
-|------|----------|---------------------|
-| 1935 | RTMP     | OBS stream ingest   |
-| 8888 | HTTP     | HLS output          |
-| 8554 | RTSP     | RTSP output         |
-| 8889 | HTTP     | WebRTC output       |
+| Port | Protocol | Purpose           |
+| ---- | -------- | ----------------- |
+| 1935 | RTMP     | OBS stream ingest |
+| 8888 | HTTP     | HLS output        |
+| 8554 | RTSP     | RTSP output       |
+| 8889 | HTTP     | WebRTC output     |
 
 Host networking is used so all ports are available on the host without explicit mapping.
 
@@ -30,6 +30,7 @@ Host networking is used so all ports are available on the host without explicit 
 ## OBS Configuration
 
 In OBS → Settings → Stream:
+
 - **Service:** Custom
 - **Server:** `rtmp://<server-ip>:1935/live`
 - **Stream Key:** (leave blank or use any value)
