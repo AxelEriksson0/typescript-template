@@ -1,0 +1,14 @@
+[Unit]
+Description=MediaMTX Stream Relay
+After=network-online.target
+
+[Container]
+Image=docker.io/bluenviron/mediamtx:latest
+Network=host
+Volume=mediamtx-config:/config
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
