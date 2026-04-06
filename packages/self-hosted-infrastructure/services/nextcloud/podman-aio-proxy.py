@@ -56,20 +56,6 @@ def patch_container_create(first_line, body_bytes):
             changed = True
             print(f"[proxy] stripped inline seccomp for {name!r}", flush=True)
 
-        # Collabora Kit workers fail to set up mount jails on overlay filesystems
-        # (Podman uses overlay for container storage). Disable jail mounting so
-        # Collabora runs unjailed but functional inside the already-isolated container.
-        if "collabora" in name.lower():
-            env = body.get("Env") or []
-            new_env = []
-            for e in env:
-                if e.startswith("extra_params=") and "--o:mount_jail_tree=false" not in e:
-                    e = e + " --o:mount_jail_tree=false --o:security.seccomp=false"
-                    print(f"[proxy] injected mount_jail_tree=false for {name!r}", flush=True)
-                    changed = True
-                new_env.append(e)
-            body["Env"] = new_env
-
         if changed:
             return json.dumps(body).encode()
     except Exception as e:
