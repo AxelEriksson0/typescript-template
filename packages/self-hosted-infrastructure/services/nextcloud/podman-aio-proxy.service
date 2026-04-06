@@ -1,0 +1,11 @@
+[Unit]
+Description=Podman socket proxy for Nextcloud AIO (strips inline seccomp)
+After=podman.socket
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/podman-aio-proxy.py
+Restart=always
+
+[Install]
+WantedBy=default.target

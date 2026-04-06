@@ -1,27 +1,48 @@
 [Unit]
-Description=NextCloud
-After=network-online.target
+Description=Nextcloud All-in-One
+After=network-online.target podman-aio-proxy.service
 
 [Container]
-Image=docker.io/nextcloud:latest
-Volume=nextcloud-data:/var/www/html
-Environment=NEXTCLOUD_TRUSTED_DOMAINS=NEXTCLOUD_HOST
-Environment=OVERWRITEWEBROOT=/nextcloud
-Environment=OVERWRITEPROTOCOL=https
-Environment=OVERWRITEHOST=NEXTCLOUD_HOST
-Environment=NEXTCLOUD_TRUSTED_PROXIES=172.16.0.0/12
+Image=ghcr.io/nextcloud-releases/all-in-one:latest
+ContainerName=nextcloud-aio-mastercontainer
+HealthCmd=none
+# Route through the proxy socket to fix Podman's inline seccomp incompatibility
+Volume=%t/podman/podman-aio-proxy.sock:/var/run/docker.sock:ro
+Volume=nextcloud_aio_mastercontainer:/mnt/docker-aio-config
+Environment=APACHE_PORT=11000
+Environment=APACHE_IP_BINDING=0.0.0.0
+# Adds the AIO apache sub-container to traefik-network so Traefik can reach it
+Environment=APACHE_ADDITIONAL_NETWORK=traefik-network
+# Watchtower still uses the real socket (doesn't create containers with inline seccomp)
+Environment=WATCHTOWER_DOCKER_SOCKET_PATH=%t/podman/podman.sock
+Environment=NEXTCLOUD_DATADIR=/mnt/ncdata
+Environment=SKIP_DOMAIN_VALIDATION=true
 Label=traefik.enable=true
-Label=traefik.http.middlewares.nextcloud-strip.stripprefix.prefixes=/nextcloud
-Label=traefik.http.routers.nextcloud-http.entrypoints=web
-Label=traefik.http.routers.nextcloud-http.rule=Host(`NEXTCLOUD_HOST`)&&PathPrefix(`/nextcloud`)
-Label=traefik.http.routers.nextcloud-http.middlewares=nextcloud-strip
-Label=traefik.http.services.nextcloud-http.loadbalancer.server.port=80
-Label=traefik.http.routers.nextcloud-https.entrypoints=websecure
-Label=traefik.http.routers.nextcloud-https.rule=Host(`NEXTCLOUD_HOST`)&&PathPrefix(`/nextcloud`)
-Label=traefik.http.routers.nextcloud-https.middlewares=nextcloud-strip
-Label=traefik.http.routers.nextcloud-https.service=nextcloud-http
-Label=traefik.http.routers.nextcloud-https.tls=true
-Label=traefik.http.routers.nextcloud-https.tls.certresolver=letsencrypt
+# --- Management UI at /aio-admin/ (permanent) ---
+# Redirect /aio-admin (no trailing slash) to /aio-admin/ so relative links resolve correctly
+Label=traefik.http.middlewares.aio-slash.redirectregex.regex=^https://NEXTCLOUD_HOST/aio-admin$$
+Label=traefik.http.middlewares.aio-slash.redirectregex.replacement=https://NEXTCLOUD_HOST/aio-admin/
+Label=traefik.http.routers.nextcloud-mgmt-slash.entrypoints=websecure
+Label=traefik.http.routers.nextcloud-mgmt-slash.rule=Host(`NEXTCLOUD_HOST`)&&Path(`/aio-admin`)
+Label=traefik.http.routers.nextcloud-mgmt-slash.tls=true
+Label=traefik.http.routers.nextcloud-mgmt-slash.tls.certresolver=letsencrypt
+Label=traefik.http.routers.nextcloud-mgmt-slash.middlewares=aio-slash
+Label=traefik.http.routers.nextcloud-mgmt-slash.service=nextcloud-mgmt
+Label=traefik.http.middlewares.aio-strip.stripprefix.prefixes=/aio-admin
+Label=traefik.http.routers.nextcloud-mgmt.entrypoints=websecure
+Label=traefik.http.routers.nextcloud-mgmt.rule=Host(`NEXTCLOUD_HOST`)&&PathPrefix(`/aio-admin/`)
+Label=traefik.http.routers.nextcloud-mgmt.tls=true
+Label=traefik.http.routers.nextcloud-mgmt.tls.certresolver=letsencrypt
+Label=traefik.http.routers.nextcloud-mgmt.middlewares=aio-strip
+Label=traefik.http.routers.nextcloud-mgmt.service=nextcloud-mgmt
+Label=traefik.http.services.nextcloud-mgmt.loadbalancer.server.url=https://nextcloud-aio-mastercontainer:8080
+# --- Main Nextcloud at / (after setup, once apache container is running) ---
+Label=traefik.http.routers.nextcloud.entrypoints=websecure
+Label=traefik.http.routers.nextcloud.rule=Host(`NEXTCLOUD_HOST`)
+Label=traefik.http.routers.nextcloud.tls=true
+Label=traefik.http.routers.nextcloud.tls.certresolver=letsencrypt
+Label=traefik.http.routers.nextcloud.service=nextcloud-aio
+Label=traefik.http.services.nextcloud-aio.loadbalancer.server.url=http://nextcloud-aio-apache:11000
 Network=traefik-network
 
 [Service]

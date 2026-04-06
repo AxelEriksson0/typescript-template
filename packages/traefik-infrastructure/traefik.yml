@@ -11,6 +11,14 @@ entryPoints:
           scheme: https
   websecure:
     address: ":443"
+    transport:
+      respondingTimeouts:
+        readTimeout: 24h
+    http:
+      encodedCharacters:
+        allowEncodedSlash: true
+        allowEncodedQuestionMark: true
+        allowEncodedPercent: true
   traefik:
     address: ":8080"
 global:
@@ -30,3 +38,5 @@ certificatesResolvers:
       storage: /etc/traefik/acme.json
       httpChallenge:
         entryPoint: web
+serversTransport:
+  insecureSkipVerify: true
