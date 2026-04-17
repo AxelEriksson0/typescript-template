@@ -85,6 +85,18 @@ https://jellyfin.example.com
 
 This requires a `jellyfin.example.com` DNS record pointing to the server. The subdomain route is already configured in the container labels.
 
+## MediaMTX
+
+MediaMTX — a zero-dependency media relay that bridges OBS (RTMP) to Jellyfin Live TV (HLS).
+
+```bash
+./services/deploy.sh mediamtx root@<server-ip>
+```
+
+> **Hetzner Cloud Firewall:** Open TCP port **1935** inbound, otherwise OBS cannot connect.
+
+See [mediamtx/README.md](mediamtx/README.md) for OBS settings and Jellyfin Live TV tuner setup.
+
 ### Samsung TV
 
 The official Jellyfin app is not available on all TVs. For some Samsung TVs, use [Samsung-Jellyfin-Installer](https://github.com/Jellyfin2Samsung/Samsung-Jellyfin-Installer) to sideload it.

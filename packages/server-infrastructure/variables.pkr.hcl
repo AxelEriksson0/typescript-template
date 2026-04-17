@@ -8,7 +8,7 @@ variable "output_name" {
 }
 variable "version" {
   type    = string
-  default = "v1.0.0"
+  default = "v1.1.0"
 }
 variable "user_data_path" {
   type    = string
@@ -16,6 +16,7 @@ variable "user_data_path" {
 }
 
 variable "ssh_keys" {
+  # Names of SSH keys uploaded to Hetzner Cloud
   type    = list(string)
   default = []
 }

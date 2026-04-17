@@ -10,8 +10,8 @@
     "watch": "tsgo -w"
   },
   "devDependencies": {
-    "@types/node": "^25.5.0",
-    "@typescript/native-preview": "^7.0.0-dev.20260329.1",
+    "@types/node": "^25.6.0",
+    "@typescript/native-preview": "^7.0.0-dev.20260413.1",
     "solid-js": "^1.9.12"
   }
 }

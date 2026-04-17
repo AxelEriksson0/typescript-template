@@ -6,6 +6,7 @@ After=network-online.target
 Image=docker.io/bluenviron/mediamtx:latest
 Network=host
 Volume=mediamtx-config:/config
+Volume=/etc/mediamtx/mediamtx.yml:/mediamtx.yml:ro
 
 [Service]
 Restart=always

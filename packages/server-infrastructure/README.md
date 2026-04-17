@@ -35,6 +35,18 @@ packer build .
 Add `- unzip` to the packages array.
 Add `-curl -fsSL https://fnm.vercel.app/install | bash` to the runcmd array.
 
+## Hetzner Cloud Firewall
+
+The server uses the Hetzner Cloud Firewall (not OS-level firewall). After provisioning, open ports in the [Hetzner Cloud Console](https://console.hetzner.cloud) → Firewalls → your firewall → Add inbound rule.
+
+Ports required by deployed services:
+
+| Port | Protocol | Service  | Required for             |
+| ---- | -------- | -------- | ------------------------ |
+| 80   | TCP      | Caddy    | HTTP → HTTPS redirect    |
+| 443  | TCP      | Caddy    | HTTPS (all web services) |
+| 1935 | TCP      | MediaMTX | RTMP ingest from OBS     |
+
 ## Services
 
 See [services/README.md](../self-hosted-infrastructure/services/README.md).

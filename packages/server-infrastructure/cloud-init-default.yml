@@ -9,6 +9,17 @@ packages:
 package_update: true
 package_upgrade: true
 
+write_files:
+  # Limit journald disk usage.
+  # Default is 10% of total disk storage.
+  - path: /etc/systemd/journald.conf.d/size.conf
+    content: |
+      [Journal]
+      SystemMaxUse=200M
+      SystemKeepFree=500M
+      SystemMaxFileSize=50M
+
 runcmd:
   - loginctl enable-linger $USER
   - systemctl --user enable --now podman.socket
+  - systemctl restart systemd-journald

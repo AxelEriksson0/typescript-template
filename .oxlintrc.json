@@ -1,4 +1,7 @@
 {
+  "categories": {
+    "correctness": "error"
+  },
   "ignorePatterns": ["**/dist/", "**/node_modules/", "**/paraglide/"],
   "options": {
     "typeAware": true
@@ -10,11 +13,8 @@
     "import/no-commonjs": "error",
     "import/no-cycle": "error",
     "import/no-dynamic-require": "error",
-    "jsx-a11y/*": "error",
     "jsx-a11y/anchor-is-valid": "off",
     "oxc/no-const-enum": "error",
-    "promise/*": "error",
-    "react/*": "error",
     "react/no-array-index-key": "error",
     "unicorn/prefer-array-find": "error",
     "unicorn/prefer-array-flat-map": "error",
