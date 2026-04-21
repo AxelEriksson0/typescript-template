@@ -62,6 +62,10 @@ This is needed because the AIO management UI serves HTTPS with a self-signed cer
 
 AIO tries to validate that the domain points directly to the server. When the DNS record goes through Cloudflare's proxy (orange cloud), this check fails. `SKIP_DOMAIN_VALIDATION=true` bypasses it.
 
+### Nextcloud Office "Unauthorized WOPI host" behind Cloudflare
+
+When opening a document, Collabora calls Nextcloud back at the public URL (`https://$HOST/...`) to fetch file info. That callback leaves the server, hits Cloudflare, and re-enters from a different Cloudflare edge IP each time. AIO seeds `richdocuments.wopi_allowlist` with just the two IPs it resolved at setup, so most callbacks get rejected. [install.sh](install.sh) overwrites the allowlist with Cloudflare's full published ranges plus internal networks. If you hit this error after a reinstall, re-run `install.sh`.
+
 ### Traefik 3.6.4+ breaks Collabora WebSocket connections
 
 Traefik 3.6.4 changed URL encoding handling in a way that breaks the WebSocket connections Collabora (Nextcloud Office) uses for document editing. The fix is to allow encoded characters on the `websecure` entrypoint in `traefik.yml`:

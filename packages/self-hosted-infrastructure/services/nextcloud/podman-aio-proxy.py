@@ -2,7 +2,7 @@
 """
 Podman socket proxy for Nextcloud AIO.
 
-Two incompatibilities between AIO and Podman's Docker-compat API are patched here:
+Three incompatibilities between AIO and Podman's Docker-compat API are patched here:
 
 1. AIO passes seccomp profiles as inline JSON in container creation requests,
    but Podman tries to open that JSON as a file path, failing with "file name
@@ -14,6 +14,17 @@ Two incompatibilities between AIO and Podman's Docker-compat API are patched her
    requires >= 1.44 and refuses to boot. We rewrite the Api-Version response
    header to 1.44 so the CLI keeps v1.44 (Podman accepts any version prefix on
    request URLs, so this is safe).
+
+3. AIO hardcodes Docker Compose FQDN-style hostnames like
+   `nextcloud-aio-apache.nextcloud-aio:23973` — used in Collabora's aliasgroup1,
+   in Nextcloud's NEXTCLOUD_EXEC_COMMANDS for `wopi_url`, and as Caddy virtual-host
+   listeners inside the apache container. Podman's Aardvark DNS only auto-resolves
+   the bare container name, not `<name>.<network>`, so these hostnames fail to
+   resolve. Stripping the suffix isn't enough either — Caddy matches vhosts by the
+   full Host header, so the FQDN must actually work as a hostname. We inject a
+   `<name>.nextcloud-aio` network alias for every container that joins the
+   nextcloud-aio network, handling both POST /containers/create (with inline
+   NetworkingConfig) and POST /networks/nextcloud-aio/connect.
 """
 import asyncio
 import json
@@ -23,6 +34,8 @@ import re
 UPSTREAM = "/run/user/0/podman/podman.sock"
 LISTEN   = "/run/user/0/podman/podman-aio-proxy.sock"
 MIN_API_VERSION = (1, 44)
+AIO_NETWORK = "nextcloud-aio"
+FQDN_SUFFIX = f".{AIO_NETWORK}"
 
 
 async def read_headers(reader):
@@ -65,10 +78,40 @@ def patch_container_create(first_line, body_bytes):
             changed = True
             print(f"[proxy] stripped inline seccomp for {name!r}", flush=True)
 
+        # Inject a <name>.nextcloud-aio network alias so Aardvark DNS resolves the
+        # FQDN that AIO hardcodes in env vars and Caddy virtual hosts
+        if name:
+            nc = body.setdefault("NetworkingConfig", {})
+            eps = nc.setdefault("EndpointsConfig", {})
+            ep = eps.setdefault(AIO_NETWORK, {})
+            aliases = ep.get("Aliases") or []
+            fqdn = f"{name}{FQDN_SUFFIX}"
+            if fqdn not in aliases:
+                ep["Aliases"] = aliases + [fqdn]
+                changed = True
+                print(f"[proxy] added FQDN alias {fqdn!r} for {name!r}", flush=True)
+
         if changed:
             return json.dumps(body).encode()
     except Exception as e:
         print(f"[proxy] patch error: {e}", flush=True)
+    return body_bytes
+
+
+def patch_network_connect(body_bytes):
+    try:
+        body = json.loads(body_bytes)
+        container = body.get("Container") or ""
+        ep = body.setdefault("EndpointConfig", {})
+        aliases = ep.get("Aliases") or []
+        # Container here may be an ID or name; only add alias if we have a name
+        fqdn = f"{container}{FQDN_SUFFIX}" if container and "/" not in container else None
+        if fqdn and fqdn not in aliases and not any(a.endswith(FQDN_SUFFIX) for a in aliases):
+            ep["Aliases"] = aliases + [fqdn]
+            print(f"[proxy] added FQDN alias {fqdn!r} on network connect", flush=True)
+            return json.dumps(body).encode()
+    except Exception as e:
+        print(f"[proxy] network connect patch error: {e}", flush=True)
     return body_bytes
 
 
@@ -120,6 +163,20 @@ async def handle(client_r, client_w):
             # Patch container create requests
             if "POST" in first_line and "/containers/create" in first_line and body:
                 new_body = patch_container_create(first_line, body)
+                if new_body != body:
+                    raw_headers = re.sub(
+                        rb"(?i)content-length: *\d+",
+                        f"content-length: {len(new_body)}".encode(),
+                        raw_headers,
+                    )
+                    body = new_body
+
+            # Patch network connect requests so AIO containers joining nextcloud-aio
+            # also get the FQDN alias (AIO separates network attach from create)
+            if ("POST" in first_line
+                    and f"/networks/{AIO_NETWORK}/connect" in first_line
+                    and body):
+                new_body = patch_network_connect(body)
                 if new_body != body:
                     raw_headers = re.sub(
                         rb"(?i)content-length: *\d+",

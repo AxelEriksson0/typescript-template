@@ -44,6 +44,21 @@ d.setdefault("borg_backup_host_location", "/mnt/nextcloud_backup")
 json.dump(d, open(p, "w"), indent=4)
 PY
 
+# Behind Cloudflare, Collabora's WOPI callback to `https://$HOST` goes out to
+# Cloudflare and re-enters from a different edge IP on each request. AIO's
+# default wopi_allowlist pins only the two IPs it resolved at setup time, so
+# most callbacks get denied as "Unauthorized WOPI host". Allowlist Cloudflare's
+# full published ranges plus internal networks. Skipped silently if Nextcloud
+# hasn't been created yet (first install happens after the setup wizard).
+CF_V4="173.245.48.0/20,103.21.244.0/22,103.22.200.0/22,103.31.4.0/22,141.101.64.0/18,108.162.192.0/18,190.93.240.0/20,188.114.96.0/20,197.234.240.0/22,198.41.128.0/17,162.158.0.0/15,104.16.0.0/13,104.24.0.0/14,172.64.0.0/13,131.0.72.0/22"
+CF_V6="2400:cb00::/32,2606:4700::/32,2803:f800::/32,2405:b500::/32,2405:8100::/32,2a06:98c0::/29,2c0f:f248::/32"
+INTERNAL="127.0.0.0/8,192.168.0.0/16,172.16.0.0/12,10.0.0.0/8,100.64.0.0/10,fd00::/8,::1/128"
+if podman exec nextcloud-aio-nextcloud true 2>/dev/null; then
+  podman exec -u 33 nextcloud-aio-nextcloud \
+    php /var/www/html/occ config:app:set richdocuments wopi_allowlist \
+    --value="${CF_V4},${CF_V6},${INTERNAL}" >/dev/null
+fi
+
 echo "Nextcloud AIO deployed."
 echo "  Management UI: https://$HOST/aio-admin/"
 echo "  Main Nextcloud: https://$HOST/ (after setup)"
