@@ -21,7 +21,20 @@ Before completing the setup wizard, create the backup directory on the server:
 ssh root@<server-ip> "mkdir -p /mnt/nextcloud_backup"
 ```
 
-Enter `/mnt/nextcloud_backup` as the backup location in the wizard, then enable **Nextcloud Office (Collabora)** under Optional Containers to activate the built-in CODE server.
+The install script pre-populates `borg_backup_host_location=/mnt/nextcloud_backup` and `daily_backup_time=04:00`, so you don't need to enter the backup location manually in the wizard. Enable **Nextcloud Office (Collabora)** under Optional Containers to activate the built-in CODE server.
+
+## Backups
+
+Configured automatically by `install.sh`:
+
+- **Location** — `/mnt/nextcloud_backup` on the server (same disk, protects against logical corruption but not disk failure)
+- **Schedule** — daily at 04:00 UTC
+- **Retention** — last 2 archives only (`BORG_RETENTION_POLICY=--keep-last=2` in [nextcloud.container](nextcloud.container))
+
+Manual steps after first deploy:
+
+1. Open the AIO admin UI and click **"Create backup"** to run the initial backup. This initializes the borg repo and reveals the borg passphrase.
+2. **Save the passphrase** somewhere safe — AIO shows it once, and without it you cannot restore.
 
 ## Known issues and workarounds
 
@@ -32,7 +45,7 @@ AIO checks its own container name on startup and refuses to run with any other n
 
 ### AIO requires a dedicated subdomain
 
-AIO cannot run under a path prefix (e.g. `a54l.se/nextcloud`). It must own the root of a domain.
+AIO cannot run under a path prefix (e.g. `example.com/nextcloud`). It must own the root of a domain.
 
 ### `serversTransports` cannot be defined via Docker labels
 

@@ -17,6 +17,8 @@ Environment=APACHE_ADDITIONAL_NETWORK=traefik-network
 Environment=WATCHTOWER_DOCKER_SOCKET_PATH=%t/podman/podman.sock
 Environment=NEXTCLOUD_DATADIR=/mnt/ncdata
 Environment=SKIP_DOMAIN_VALIDATION=true
+# Keep only the last 2 borg archives (disk is limited)
+Environment=BORG_RETENTION_POLICY=--keep-last=2
 Label=traefik.enable=true
 # --- Management UI at /aio-admin/ (permanent) ---
 # Redirect /aio-admin (no trailing slash) to /aio-admin/ so relative links resolve correctly

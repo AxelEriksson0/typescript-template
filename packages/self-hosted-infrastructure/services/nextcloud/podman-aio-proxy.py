@@ -2,10 +2,18 @@
 """
 Podman socket proxy for Nextcloud AIO.
 
-AIO passes seccomp profiles as inline JSON in container creation requests,
-but Podman's Docker compat API tries to open that JSON as a file path,
-failing with "file name too long". This proxy intercepts POST /containers/create
-requests and replaces inline seccomp JSON with "seccomp=unconfined".
+Two incompatibilities between AIO and Podman's Docker-compat API are patched here:
+
+1. AIO passes seccomp profiles as inline JSON in container creation requests,
+   but Podman tries to open that JSON as a file path, failing with "file name
+   too long". We intercept POST /containers/create and replace inline seccomp
+   JSON with "seccomp=unconfined".
+
+2. Podman advertises Api-Version 1.41 in response headers. Docker CLI 29+
+   (bundled in the AIO image) negotiates down to 1.41, but AIO's startup check
+   requires >= 1.44 and refuses to boot. We rewrite the Api-Version response
+   header to 1.44 so the CLI keeps v1.44 (Podman accepts any version prefix on
+   request URLs, so this is safe).
 """
 import asyncio
 import json
@@ -14,6 +22,7 @@ import re
 
 UPSTREAM = "/run/user/0/podman/podman.sock"
 LISTEN   = "/run/user/0/podman/podman-aio-proxy.sock"
+MIN_API_VERSION = (1, 44)
 
 
 async def read_headers(reader):
@@ -61,6 +70,14 @@ def patch_container_create(first_line, body_bytes):
     except Exception as e:
         print(f"[proxy] patch error: {e}", flush=True)
     return body_bytes
+
+
+def rewrite_api_version(raw_headers):
+    def repl(m):
+        if (int(m.group(1)), int(m.group(2))) < MIN_API_VERSION:
+            return f"Api-Version: {MIN_API_VERSION[0]}.{MIN_API_VERSION[1]}\r\n".encode()
+        return m.group(0)
+    return re.sub(rb"(?im)^Api-Version: *(\d+)\.(\d+)\r?\n", repl, raw_headers)
 
 
 async def pipe(reader, writer):
@@ -123,6 +140,7 @@ async def handle(client_r, client_w):
             resp_headers = await read_headers(up_r)
             if resp_headers is None:
                 break
+            resp_headers = rewrite_api_version(resp_headers)
             client_w.write(resp_headers)
             await client_w.drain()
 
