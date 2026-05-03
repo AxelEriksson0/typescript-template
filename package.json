@@ -33,7 +33,7 @@
     "test": "yarn format && yarn lint && yarn ut",
     "update": "yarn update:node && yarn update:yarn && yarn update:dependencies",
     "update:dependencies": "npx npm-check-updates --deep --upgrade --install always && yarn && yarn dedupe",
-    "update:node": "fnm install \"$(fnm list-remote | tail -n 1)\" && fnm use \"$(fnm list-remote | tail -n 1)\" && fnm list-remote | tail -n 1 > .node-version",
+    "update:node": "NODE_VERSION_WITH_V=$(fnm list-remote | tail -n 1) && NODE_VERSION=$(printf '%s' \"$NODE_VERSION_WITH_V\" | sed 's/^v//') && fnm install \"$NODE_VERSION_WITH_V\" && fnm use \"$NODE_VERSION_WITH_V\" && echo \"$NODE_VERSION_WITH_V\" > .node-version && npm pkg set engines.node=\">=$NODE_VERSION\"",
     "update:yarn": "yarn set version latest && corepack prepare yarn@latest --activate",
     "ut": "yarn workspaces foreach --all run ut"
   },
@@ -41,13 +41,13 @@
     "solid-js": "^1.9.12"
   },
   "devDependencies": {
-    "lefthook": "^2.1.5",
-    "oxfmt": "^0.45.0",
-    "oxlint": "^1.60.0",
-    "oxlint-tsgolint": "^0.20.0"
+    "lefthook": "^2.1.6",
+    "oxfmt": "^0.47.0",
+    "oxlint": "^1.62.0",
+    "oxlint-tsgolint": "^0.22.1"
   },
   "engines": {
-    "node": ">=24.6.0"
+    "node": ">=25.9.0"
   },
-  "packageManager": "yarn@4.13.0"
+  "packageManager": "yarn@4.14.1"
 }
