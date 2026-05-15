@@ -4,8 +4,10 @@
   "include": ["**/*.ts", "**/*.tsx", "*.ts", "*.tsx", "*.js", "**/*.js"],
   "compilerOptions": {
     "allowJs": true,
-    "moduleResolution": "bundler",
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
     "module": "esnext",
+    "moduleResolution": "bundler",
     "outDir": "./dist"
   }
 }

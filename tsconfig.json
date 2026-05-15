@@ -1,17 +1,10 @@
 {
   "exclude": ["dist", "node_modules"],
   "compilerOptions": {
-    /*
-     * TODO - Move into packages/web.
-     * See docs/TSCONFIG.md for more information.
-     */
-    "allowJs": true,
     "allowUnreachableCode": false,
     "composite": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "preserve",
-    "jsxImportSource": "solid-js",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
