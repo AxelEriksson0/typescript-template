@@ -1,0 +1,29 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "^(apply_patch|Edit|Write)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -lc 'yarn lint'",
+            "timeout": 120,
+            "statusMessage": "Running lint"
+          },
+          {
+            "type": "command",
+            "command": "bash -lc 'yarn build'",
+            "timeout": 300,
+            "statusMessage": "Running build"
+          },
+          {
+            "type": "command",
+            "command": "bash -lc 'yarn ut'",
+            "timeout": 300,
+            "statusMessage": "Running unit tests"
+          }
+        ]
+      }
+    ]
+  }
+}
