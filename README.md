@@ -27,7 +27,7 @@ Web infrastructure project with SolidJS and DaisyUI.
 
 - Using experimental TypeScript 7 version.
 - Using Yarn as it simplifies adding arguments when running scripts.
-- Using Zed instead of VS Code to keep the editor setup fast and avoid the performance cost and bloat of a heavier extension stack.
+- Using Zed instead of VS Code to keep the editor setup fast and avoid the performance cost and bloat.
 - ESM-only.
 
 ### Oxlint
