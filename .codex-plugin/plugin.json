@@ -1,0 +1,11 @@
+{
+  "name": "coding-template",
+  "version": "0.1.0",
+  "description": "Repository-local Codex skills and configuration for coding-template.",
+  "skills": "./.codex/skills/",
+  "interface": {
+    "displayName": "Coding Template",
+    "shortDescription": "Repository-local Codex skills",
+    "defaultPrompt": ["Use $ssh-disk-usage-report to inspect server disk usage."]
+  }
+}

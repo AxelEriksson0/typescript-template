@@ -1,0 +1,4 @@
+interface:
+  display_name: "SSH Disk Usage Report"
+  short_description: "Audit remote server disk usage"
+  default_prompt: "Use $ssh-disk-usage-report to SSH into the server from this repo's .env and report disk cleanup candidates."

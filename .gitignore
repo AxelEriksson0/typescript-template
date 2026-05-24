@@ -1,5 +1,8 @@
 dist/
 node_modules/
+__pycache__/
+*.py[cod]
+*$py.class
 
 .pnp.*
 .yarn/*
