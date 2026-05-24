@@ -33,21 +33,21 @@
     "test": "yarn format && yarn lint && yarn ut",
     "update": "yarn update:node && yarn update:yarn && yarn update:dependencies",
     "update:dependencies": "npx npm-check-updates --deep --upgrade --install always && yarn && yarn dedupe",
-    "update:node": "NODE_VERSION_WITH_V=$(fnm list-remote | tail -n 1) && NODE_VERSION=$(printf '%s' \"$NODE_VERSION_WITH_V\" | sed 's/^v//') && fnm install \"$NODE_VERSION_WITH_V\" && fnm use \"$NODE_VERSION_WITH_V\" && echo \"$NODE_VERSION_WITH_V\" > .node-version && npm pkg set engines.node=\">=$NODE_VERSION\"",
+    "update:node": "NODE_VERSION_WITH_V=$(fnm list-remote | tail -n 1) && NODE_VERSION=$(printf '%s' \"$NODE_VERSION_WITH_V\" | sed 's/^v//') && FNM_COREPACK_ENABLED=false fnm install \"$NODE_VERSION_WITH_V\" && FNM_COREPACK_ENABLED=false fnm use \"$NODE_VERSION_WITH_V\" && npm install --global corepack@latest && corepack enable && echo \"$NODE_VERSION_WITH_V\" > .node-version && npm pkg set engines.node=\">=$NODE_VERSION\"",
     "update:yarn": "yarn set version latest && corepack prepare yarn@latest --activate",
     "ut": "yarn workspaces foreach --all run ut"
   },
   "dependencies": {
-    "solid-js": "^1.9.12"
+    "solid-js": "^1.9.13"
   },
   "devDependencies": {
-    "lefthook": "^2.1.6",
-    "oxfmt": "^0.49.0",
-    "oxlint": "^1.64.0",
-    "oxlint-tsgolint": "^0.22.1"
+    "lefthook": "^2.1.8",
+    "oxfmt": "^0.51.0",
+    "oxlint": "^1.66.0",
+    "oxlint-tsgolint": "^0.23.0"
   },
   "engines": {
-    "node": ">=26.1.0"
+    "node": ">=26.2.0"
   },
-  "packageManager": "yarn@4.14.1"
+  "packageManager": "yarn@4.15.0"
 }
